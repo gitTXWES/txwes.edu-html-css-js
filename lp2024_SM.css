@@ -1,0 +1,285 @@
+/* sm	640px  */
+@media (min-width: 640px) {
+	.program_text {
+		  margin-top:2.5rem;
+	  }
+
+
+	  .image_headline_block {
+		  grid-auto-flow: column;
+		  grid-template-columns: 1fr 1fr;
+		  grid-template-rows: auto;
+		  align-items: start;
+
+	  }
+
+	  .headline_block {
+		  place-items: start;
+		  place-content: space-between;
+
+	  }
+
+	  .headline_block_h2svg_wrap {
+		  text-align: left;
+	  }
+
+	  .headline_block_headline {
+		  font-size: 3rem;
+		  position: relative;
+		  bottom: .75rem;
+		  margin-bottom: 0;
+	  }
+
+	  .headline_block>p {
+
+		  text-align: left;
+	  }
+
+	  .image_left {
+		  grid-column: 1/2;
+		  justify-self: start;
+
+	  }
+
+	  .image_right {
+		  grid-column: 2/3;
+		  justify-self: end;
+
+	  }
+
+
+	  .image_headline_block_wrap {
+		  margin: 2.5rem auto 0rem;
+	  }
+
+
+	  .headline_body_headline {
+		  font-size: 3rem!important;
+			margin-bottom: 1.25rem;
+		  line-height:58px;
+			font-weight: 800;
+
+	  }
+
+	  .headline_body_left_right_outer {
+		  margin: 2.5rem auto 0rem;
+
+	  }
+
+
+
+}
+
+
+/*md	768px	*/
+@media (min-width: 768px) {
+	.banner_2_outer {
+		width: 100%;
+	}
+
+	.banner_2_inner {
+		width: 100%;
+	}
+
+	.banner_2_image {
+		box-shadow: 1px 2px 3px rgba(157, 157, 157, .5);
+	}
+
+	.banner_2_headline_transparency {
+		width: calc(100% - 124px);
+		border-bottom-right-radius: .875rem;
+		border-bottom-left-radius: .875rem;
+		height: 6.5rem;
+	}
+
+	.banner_2_headline_wrap {
+		border-bottom-right-radius: .875rem;
+		border-bottom-left-radius: .875rem;
+		height: 6.5rem;
+	}
+
+
+	.banner_2_headline {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+		  font-weight:600;
+	}
+
+	.banner_2_subheadline {
+		font-size: 1.125rem;
+	}
+
+	.program_text_title {
+		font-size: 3rem;
+	}
+
+	.program_text {
+		margin: 5rem 3.875rem 0;
+		padding: 0rem;
+	}
+
+	.program_text_body {
+		padding: 0rem;
+	}
+	  .noshow-md {
+		display:none;
+	}
+
+
+	.member_donation_outer {
+		padding: 0rem 3.875rem;
+		margin:5rem auto 0rem;
+
+	}
+
+	.benefits_outer{
+		padding: 0rem 3.875rem;
+		   margin:0 auto 0;
+	}
+
+	.donation_level{
+		font-size: 26px;
+		margin: 40px auto;
+
+	}
+	.benefits_outer > h3 {
+		padding:10px 16px;
+		font-size:18px;
+
+	}
+
+	.member_donation{
+		padding:18px 24px;
+	}
+
+	.donation_row_1,
+	.donation_row_2,
+	.donation_row_3
+	{
+		gap:18px;
+	}
+
+	.donation_row_2{
+		margin: 18px 0px;
+	}
+	.benefit_chart_outer > div{
+		padding:0px 16px 0px 18px;
+	}
+	.initial_outer, .hospitality_outer, .stewardship_outer{
+
+		padding: 18px 0px;
+	}
+
+
+	.image_headline_block_wrap {
+		margin: 5rem auto 0rem;
+		padding: 0rem 3.875rem;
+	}
+
+	.image_headline_block {
+		gap: 2.5rem;
+
+		padding: 0rem 0rem;
+	}
+
+	.headline_body_left_right_outer {
+	  margin: 5rem auto 0rem;
+	  padding:0 3.875rem;
+	  margin-bottom:2.5rem;
+	}
+
+	.headline_body_left_right_inner {
+		grid-auto-flow: column;
+		gap: 3.25rem;
+	}
+
+
+
+}
+
+/* lg	1024px	*/
+@media (min-width: 1024px) {
+
+	.banner_2_headline_transparency {
+		width: 100%;
+	}
+
+	.program_text {
+		margin: 6.25rem auto 0;
+		padding: 0rem;
+	}
+
+	.program_text_body {
+		padding: 0 5rem;
+	}
+
+
+		.member_donation_outer{
+			padding:0px;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 24px;
+		}
+
+		.donation_row_1,
+		.donation_row_2{
+			display: grid;
+			gap : 24px;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+
+		.donation_row_2{
+			margin:  0px;
+		}
+		.donation_row_3{
+			grid-column: 1 / span 2;
+			display:grid;
+			gap:24px;
+			grid-template-columns: 1fr 1fr;
+		}
+
+		.member_donation{
+			padding:24px 24px;
+			font-variation-settings: "wght" 500;
+			font-size:18px;
+		}
+
+		.donation_level{
+		font-size: 32px;
+		margin: 48px auto;
+		text-align:center;
+	}
+
+	 .benefits_outer{
+		padding: 0rem;
+
+	}
+
+	.image_headline_block_wrap {
+			margin: 6.25rem auto 0rem;
+
+		}
+
+	.headline_body_left_right_outer {
+	  margin: 6.25rem auto 0rem;
+	  margin-bottom: 3rem;
+
+	}
+	  .headline_body_left_right_inner {
+		grid-auto-flow: column;
+		gap: 6.25rem;
+	}
+
+
+
+
+}
+
+	/*xl	1280px	*/
+@media (min-width: 1280px) {  }
+
+/*2xl	1536px	*/
+@media (min-width: 1536px) {  }
+
+/*3xl 2048px */
+@media(min-width: 2048px) { }

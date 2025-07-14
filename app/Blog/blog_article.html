@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Texas Wesleyan Blog</title>
+
+		<link rel="stylesheet" href="https://use.typekit.net/dyt3onb.css"/>
+		<link rel="stylesheet" href="../css/size_indicator.css" />
+		<link rel="stylesheet" href="../css/tailwind_preflight.css" />
+		<link rel="stylesheet" href="css/blog_article.css" />
+		<link rel="stylesheet" href="css/share.css" />
+
+	</head>
+	<body>
+		<div id="header_app">
+		<header>
+			<div class="header_title_bar_wrap">
+			<template v-if="docTitle">
+				<head-title-home></head-title-home>
+			</template>
+			<template v-else>
+				<head-title-blog></head-title-blog>
+			</template>
+			<div class="header_icons_wrap">
+				<button class="hearder_search">
+					<img src="images/icons/magnifying-glass.svg" alt="magnifying glass" />
+				</button>
+				<button class="header_menu_open" @click="openMenu" >
+				<img src="images/icons/three-bars-right copy.svg" alt="three bars menu open" />
+				</button>
+			</div>
+			</div>
+			<template v-if="openedMenu">
+			<blog-menu @close="closeMenu"></blog-menu>
+			</template>
+		</header>
+	</div>
+	  <main>
+	  <article>
+		<div class="blog_article_outer">
+			<div class="blog_article_inner">
+				<div class="blog_article_picture_wrap">
+					<img src="images/image_five_600_by_450.jpg" alt="image" />
+				</div>
+				<div class="blog_article_title_wrap">
+						<p class="blog_article_label">Article</p>
+						<h1 class="blog_article_title">Lorem ipsum dolor sit, amet consectetur adipiscing elit, blandit convallis</h1>
+						<div id="share_app">
+						<div class="blog_article_footer">
+							<template v-if="!share">
+							<time class="blog_article_published">April, 16 2025</time>
+							<button aria-label="Share the article to social media or copy link" @click="share = !share">
+							<img class="share_icon" src="images/icons/share-icon.svg" alt="share icon" />
+							</button>
+							</template>
+							<template v-else>
+								<share-blog :blogUrl="articlePath" @closeshare="closeShare"></share-blog>
+							</template>
+						</div>
+						</div>
+				</div>
+			</div>
+				<div class="blog_article_body">
+					<div class="blog_article_slide blog_article_requried">
+						<p><em>Welcome to my first blog post! As a mom of two girls, the first female president of Texas Wesleyan University, and an educator at heart, my purpose is to serve others. With the drive and desire to connect with the RAMily and beyond, this blog offers a glimpse into my journey as a first-generation student, while fostering a space for meaningful conversations about leadership, education, and the power of community.&nbsp;</em></p>
+						<h2>From First-Generation College Student to University President: A Journey Rooted in Family, Education, and Empowerment</h2>
+						<div class="blog_article_column_wrap">
+							<div class="blog_article_column">
+						<p>As a first-generation college student, I know firsthand that the path to higher education can feel daunting. My parents&mdash;my father, a firefighter, and my mother, a homemaker&mdash;did not graduate from college. Yet, they instilled in me a deep belief in the power of education. They taught me from a young age that I could accomplish anything I set my heart on. Their support, faith, and work ethic were the foundation that allowed me to dream big&mdash;and ultimately, to make those dreams a reality.</p>
+						<p>My story is one that began with a faith-filled and hard-working family, and it is now a story of growth, perseverance, and a commitment to empowering others. I am proud to be the first female president at Texas Wesleyan University, a university I have the honor of leading. But the journey from a first-generation college student to university president is one that wasn&rsquo;t made alone. I had the privilege of being surrounded by people who believed in me: my parents, teachers, professors, and mentors who dedicated themselves to my future, much like I now dedicate myself to the future of our students at TXWES. As a mother of two daughters, my mission is clear: to make sure every student, regardless of their background, feels empowered to achieve their dreams. Whether they are the first in their family to attend college, or from a home of college graduates, all students deserve a path to success where they feel their dream of a college degree is achievable and supported.</p>
+						<p>I think about what my parents have said to me over the years that the dreams I&rsquo;ve been able to achieve were a collective effort. At first, my journey started as a single dream of serving as a university president where I can make an impact. Now, it&rsquo;s not about that single dream, it&rsquo;s a life&rsquo;s mission serving students who all have dreams. And that is why, as president, I work every day to ensure that the future of our students is full of possibilities.</p>
+						<p>At Texas Wesleyan, we strive to create an environment where students feel supported, seen, and valued. Our core values focus on connection, commitment, compassion and courage. Our TXWES culture starts with making sure our campus is welcoming and personalized to everyone. Our work is never finished, and that is why we continue to look for ways to expand support systems for our students&mdash;whether it&rsquo;s through student organizations that create a sense of belonging, career services that ensure they are prepared for life after graduation, internships
+						and practicums providing real-time and hands on experiences, or the many other resources we offer, including tutoring, a food pantry, and a clothes closet. We look at serving each student in a holistic manner and identifying how we can support our students from &ldquo;backpack&rdquo; to &ldquo;briefcase.&rdquo;</p>
+						</div>
+						<div class="blog_article_column">
+						<p>We want students to know that we are here for them every step of the way. It is my belief that when students feel supported by those around them&mdash;whether it&rsquo;s their professors, their peers, or the staff&mdash;they begin to unlock their potential. When students are given the tools to succeed, the compassion to grow, and the space to take risks and fail, they develop the courage and tenacity to achieve their goals.</p>
+						<p>My life&rsquo;s mission is rooted in the values I hold dear and echoes the lessons my parents taught me&mdash;that you can achieve anything with the right attitude, effort and resources to create opportunity and success. Just as they instilled in me the belief that anything is possible, and with their dedication and support, I am here to help you see and reach that same potential within yourselves. The opportunities for every student at TXWES are immense, and I look forward to leading the university, our students and our community on our collective journeys.</p>
+						<p>Who knew this Alabama girl would call Fort Worth, Texas, and Texas Wesleyan University "home"? My journey here has been one of growth, resilience, and the unwavering belief that we are all capable of achieving greatness. As I reflect on how far I've come, I&rsquo;m reminded that it&rsquo;s the community, the values, and the spirit of this university that has allowed me to thrive and continue to grow. It is my honor to serve in this place, where diverse backgrounds and unique experiences come together to build a supportive environment for all. Here, we create opportunities, inspire ambition, and work together toward success.</p>
+						</div>
+						</div>
+					</div>
+					<!-- split here for bottom class = "blog_article_slide slide_type"  -->
+				</div>
+
+		</div>
+	   </article>
+	  </main>
+	  <footer>
+			<div class="footer_outer">
+				<div class="footer_inner">
+					<div class="footer_inner_logo">
+						<a href="https://txwes.edu"><img loading="lazy" src="images/TxWesPrimaryLogo_onWhite.png" alt="Texas Wesleyan University Logo and Slogan"/></a>
+					</div>
+					<div class="footer_inner_address_wrap">
+						   <address>
+							   1201 Wesleyan Street<br>
+							   Fort Worth, TX 76105
+							   <a href="tel:817-531-4444" ><img src="images/icons/phone_icon.svg" alt="Telephone Icon" />817-531-4444</a>
+						   </address>
+					   </div>
+				   <div class="social_main footer_inner_social_media_wrap">
+					  <ul>
+					   <li class="social_icon"><a href="https://www.instagram.com/texaswesleyan/"><img loading="lazy" src="images/icons/instagram_logo.svg" alt="Instagram Logo" /></a></li>
+					   <li class="social_icon"><a href="https://www.tiktok.com/@txwes_official"><img loading="lazy" src="images/icons/tiktok_logo.svg" alt="TikTok Logo" /></a></li>
+					   <li class="social_icon"><a href="https://www.linkedin.com/edu/school?id=19510"><img loading="lazy" src="images/icons/indeed_logo.svg" alt="LinkedIn Logo" /></a></li>
+					   <li class="social_icon"><a href="http://twitter.com/texaswesleyan"><img loading="lazy" src="images/icons/x_twitter_logo.svg" alt="X Logo" /></a></li>
+					   <li class="social_icon"><a href="http://facebook.com/texaswesleyan"><img loading="lazy" src="images/icons/facebook_logo.svg" alt="Face Book Logo" /></a></li>
+					   <li class="social_icon"><a href="http://youtube.com/texaswesleyan"><img loading="lazy" src="images/icons/youtube_logo.svg" alt="YouTube Logo" /></a></li>
+					 </ul>
+				 </div>
+
+				   <div class="footer_inner_legal">
+					   <ul>
+						   <li class="legal_item_one"><a href="https://txwes.edu/admissions/what-will-it-cost/fees-costs-and-policies/university-policies/privacy-policy/">Privacy Policy</a></li>
+						   <li class="legal_item_two"><a href="https://txwes.edu/communications/resources/web-accessibility/">Accessibility Policy</a></li>
+						   <li class="legal_item_three"><a href="https://txwes.edu/admissions/financial-aid--scholarships/policies-and-consumer-information/">Policies and Consumer Information</a></li>
+						   <li class="legal_item_four"><a href="https://txwes.edu/incident-report-form/">Report an Incident</a></li>
+						   <li class="legal_item_five"><a href="#t4edittag">&copy; </a> Texas Wesleyan University</li>
+					   </ul>
+				   </div>
+				</div>
+			</div>
+		</footer>
+
+	  <script type="module">
+		  import { createApp } from 'https://cdn.jsdelivr.net/npm/vue/dist/vue.esm-browser.js'
+		  import {blogs} from './js/blogData.js'
+
+		  import HeadTitleHome from './js/header_components/HeadTitleHome.js'
+		  import HeadTitleBlog from './js/header_components/HeadTitleBlog.js'
+		  import BlogMenu from './js/header_components/BlogMenu.js'
+		  import ShareBlog from './js/main_components/ShareBlog.js'
+
+		  import {gsap} from 'https://cdn.jsdelivr.net/npm/gsap@3.12.7/+esm'
+		  import {ScrollTrigger} from 'https://cdn.jsdelivr.net/npm/gsap@3.12.7/ScrollTrigger/+esm'
+		  import {TextPlugin} from 'https://cdn.jsdelivr.net/npm/gsap@3.12.7/TextPlugin/+esm'
+
+
+		  gsap.registerPlugin(ScrollTrigger,TextPlugin)
+
+		  const header_app = createApp({
+			 components: {
+				 HeadTitleHome,
+				 HeadTitleBlog,
+				 BlogMenu
+			},
+			 data(){
+				  return {
+					openedMenu:false,
+					blogs:blogs.reverse,
+				  }
+			 },
+			 computed:{
+				docTitle(){ return document.title == "Texas Wesleyan Blog"},
+			 },
+			 featuredBlog(){
+				   return this.blogs.find((item)=> item.featured == true)
+			   },
+
+			 mounted() {
+
+				 },
+
+			 methods:{
+				 openMenu(){
+					 this.openedMenu = true;
+				 },
+				 closeMenu(){
+					 this.openedMenu = false;
+				 }
+			 }
+
+		 });
+		 header_app.provide( "gsap" , gsap );
+		 header_app.mount('#header_app');
+
+
+		   const share_app = createApp({
+			  components: {
+				  ShareBlog
+			 },
+			  data(){
+				   return {
+					 share:false,
+				   }
+			  },
+			  computed:{
+			  	articlePath(){
+					  return window.location.pathname;
+				  }
+			  },
+			  mounted() {
+
+			  },
+			  methods:{
+				closeShare(){
+					 this.share = false;
+				 },
+			  }
+
+		  });
+		  share_app.provide( "gsap" , gsap );
+		  share_app.mount('#share_app');
+
+
+		let animateTitle = gsap.timeline({
+			scrollTrigger:{
+				trigger:".blog_article_picture_wrap",
+				start:"center top",
+				endTrigger:".blog_article_title_wrap",
+				end:"bottom top",
+				pin:false,
+				scrub:1.3,
+				markers:true,
+
+			}
+		})
+
+		let articleTitle= document.querySelector(".blog_article_title").innerText;
+
+		animateTitle.to(".header_title",{
+			text:{
+				value:articleTitle,
+				delimiter:"",
+
+			}
+		}
+
+		)
+
+	  </script>
+	</body>
+</html>

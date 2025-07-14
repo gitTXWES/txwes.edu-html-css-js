@@ -1,0 +1,125 @@
+	.hp_video_cta_wrap {
+		position: absolute;
+		z-index: 15;
+		bottom: 0;
+		width: 100%;
+		display: block;
+	}
+
+	.hp_video_mobile_cta {
+		padding: 1.5rem;
+		background: rgba(0, 36, 96, .75);
+		color: #ffffff;
+		font-family: oswald;
+		font-size: 1.5rem;
+		padding: 1.5rem;
+		text-align: center;
+		width: 100%;
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+
+	.hp_video_tablet_cta,
+	.hp_video_optional_cta {
+		display: none;
+	}
+
+	.hp_banner_outer {
+		background: hsla(206, 96%, 31%, 1);
+		background: linear-gradient(283deg, hsla(0, 0%, 0%, 1) 0%, hsla(208, 100%, 24%, 1) 75%);
+		background: -moz-linear-gradient(283deg, hsla(206, 96%, 31%, 1) 0%, hsla(208, 100%, 24%, 1) 75%);
+		background: -webkit-linear-gradient(283deg, hsla(206, 96%, 31%, 1) 0%, hsla(208, 100%, 24%, 1) 75%);
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.hp_banner_inner {
+		position: relative;
+	}
+
+	.hp_banner_video_container>#hp_video_banner {
+		height: 100vh;
+		max-height: 450px;
+	}
+
+	#hp_video_banner>iframe {
+		box-sizing: border-box;
+		height: 56.25vw;
+		left: 50%;
+		min-height: 100%;
+		min-width: 100%;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		visibility: visible;
+		width: 177.77777778vh;
+		z-index: 5;
+	}
+
+	/* sm	640px  */
+	@media (min-width: 640px) {
+		.hp_banner_outer {}
+	}
+
+	/*md	768px	*/
+	@media (min-width: 768px) {
+		.hp_video_cta_wrap {
+			display: grid;
+			grid-auto-flow: column;
+			gap: 2.25rem;
+			bottom: 2.25rem;
+			padding: 0 2.25rem;
+		}
+
+		.hp_video_mobile_cta,
+		.hp_video_tablet_cta,
+		.hp_video_optional_cta {
+			padding: 1.5rem;
+			background: rgba(0, 36, 96, .75);
+			color: #ffffff;
+			font-family: oswald;
+			font-size: 1.25rem;
+			padding: 1.5rem;
+			text-align: center;
+			width: 100%;
+			text-transform: uppercase;
+			font-weight: 500;
+			display: block;
+			border-radius: 6px;
+		}
+
+		.hp_banner_outer {}
+
+
+
+		.hp_banner_video_container>#hp_video_banner {
+			height: 100vh;
+			max-height: 600px;
+		}
+	}
+
+	/* lg	1024px	*/
+	@media (min-width: 1024px) {
+		.hp_banner_video_container>#hp_video_banner {
+			max-height: fit-content;
+		}
+
+		.hp_video_cta_wrap {
+			padding: 0 3rem;
+			gap: 2.25rem;
+			bottom: 2.25rem;
+		}
+
+		.hp_banner_video_container>#hp_video_banner {
+			max-height: 650px;
+		}
+	}
+
+	/*xl	1280px	*/
+	@media (min-width: 1280px) {
+		.hp_banner_outer {}
+	}
+
+	/*2xl	1536px	*/
+
+	@media (min-width: 1536px) {}

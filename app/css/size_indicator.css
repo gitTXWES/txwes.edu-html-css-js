@@ -1,0 +1,81 @@
+/* size reference indicator */
+.size-indicator{
+	padding: 2rem;
+}
+.xs,.sm, .md, .lg,.xl,.xl2,.xl3{
+	font-size: 1.25rem;
+	color: #45874c;
+	margin: 2rem;
+
+}
+
+.xs {
+	display:block;
+}
+
+.sm, .md, .lg, .xl, .xl2 , .xl3{
+	display: none;
+}
+
+/* sm	640px  */
+@media (min-width: 640px) {
+	.sm {
+		display:block;
+	}
+
+	.xs, .md, .lg, .xl, .xl2, .xl3{
+		display: none;
+	}
+}
+
+/*md	768px	*/
+@media (min-width: 768px) {
+	.md{
+		display:block;
+	}
+	.xs,.sm,.lg,.xl, .xl2, .xl3{
+		display: none;
+	}
+  }
+
+/* lg	1024px	*/
+@media (min-width: 1024px) {
+	.lg{
+		display:block;
+	}
+	.xs,.sm,.md,.xl, .xl2, .xl3{
+		display: none;
+	}
+
+ }
+
+/*xl	1280px	*/
+@media (min-width: 1280px) {
+	.xl {
+		display:block;
+	}
+	.xs,.sm,.md,.lg,.xl2,.xl3{
+		display: none;
+	}
+
+ }
+/*2xl	1536px	*/
+@media (min-width: 1536px) {
+	.xl2{
+		display:block;
+	}
+	.xs,.sm,.md,.lg,.xl,.xl3{
+		display: none;
+	}
+
+ }
+
+ /* 3xl 2048px */
+ @media(min-width: 2048px){
+	 .xl3{
+			 display:block;
+	 }
+	 .xs, .sm, .md, .lg, .xl, .xl2 {
+		 display: none;
+	 }
+ }

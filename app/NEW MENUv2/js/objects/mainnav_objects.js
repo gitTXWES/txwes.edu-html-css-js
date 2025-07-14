@@ -1,0 +1,116 @@
+var navigation = {
+	"about": {
+		category_url: "https://txwes.edu/about/",
+		"university info": [
+			{ name: "history", url: "https://txwes.edu/about/university-history/" },
+			{ name: "our mission", url: "https://txwes.edu/about/mission/" },
+			{ name: "find an office", url: "https://txwes.edu/search/directory/" },
+			{ name: "map & directions", url: "https://txwes.edu/about/map--directions/" },
+		],
+		"related links": [
+			{ name: "university policies", url: "https://txwes.edu/about/university-policies/" },
+			{ name: "diversity and inclusion", url: "https://txwes.edu/diversity-and-inclusion/" },
+			{ name: "office of the president", url: "https://txwes.edu/office-of-the-president/" },
+		],
+	},
+	"academics": {
+		category_url: "https://txwes.edu/academics/",
+		"majors & programs": [
+			{ name: "undergraduate majors", url: "https://txwes.edu/academics/undergraduate-majors/" },
+			{ name: "online programs", url: "https://txwes.edu/academics/online-programs/" },
+			{ name: "graduate programs", url: "https://txwes.edu/academics/graduate-programs/" },
+			{ name: "dual degree programs", url: "https://txwes.edu/academics/dual-degree-programs/" },
+		],
+		"student resources": [
+			{ name: "academic advising", url: "https://txwes.edu/academics/academic-advising-and-student-success/" },
+			{ name: " tutoring", url: "https://txwes.edu/academics/academic-advising-and-student-success/academic-success-center/tutoring/" },
+			{ name: "career services", url: "https://txwes.edu/student-life/student-resources/career-services/" },
+			{ name: "west library", url: "https://westlibrary.txwes.edu/" },
+			{ name: "additional resources", url: "https://txwes.edu/academics/student-resources/" },
+		],
+		registrar: [
+			{ name: "academic calendar", url: "https://txwes.edu/academics/registrar/news-and-events/academic-calendar/" },
+			{ name: "register for classes", url: "https://txwes.edu/academics/registrar/register-for-class/" },
+			{ name: "transcript request", url: "https://txwes.edu/academics/registrar/order-transcript/" },
+			{ name: "apply for graduation", url: "https://txwes.edu/academics/registrar/apply-for-graduation/" },
+			{ name: "policies & forms", url: "https://txwes.edu/academics/registrar/policies--forms/" },
+			{ name: "academic catalog", url: "http://txwes.smartcatalogiq.com/en/" },
+		],
+	},
+	"admissions & aid": {
+		category_url: "https://txwes.edu/admissions/",
+		admissions: [
+			{ name: "apply now", url: "https://txwes.edu/admissions/apply-now/" },
+			{ name: "freshman", url: "https://txwes.edu/admissions/undergraduate/freshman/" },
+			{ name: "transfer", url: "https://txwes.edu/admissions/undergraduate/transfer/" },
+			{ name: "graduate", url: "https://txwes.edu/admissions/graduate/" },
+			{ name: "international ", url: "https://txwes.edu/admissions/international/" },
+		],
+		"finalcial aid": [
+			{ name: "freshman scholarships", url: "https://txwes.edu/admissions/financial-aid--scholarships/scholarships-and-aid/types-of-financial-aid/scholarships/freshman-scholarships/" },
+			{ name: "transfer scholarships", url: "https://txwes.edu/admissions/financial-aid--scholarships/scholarships-and-aid/types-of-financial-aid/scholarships/transfer-scholarships/" },
+			{ name: "types of financial aid", url: "https://txwes.edu/admissions/financial-aid--scholarships/scholarships-and-aid/types-of-financial-aid/" },
+			{ name: "applying for aid", url: "https://txwes.edu/admissions/financial-aid--scholarships/apply-for-aid/" },
+		],
+		"related links": [
+			{ name: "visit campus", url: "https://txwes.edu/admissions/visit-campus/" },
+			{ name: "tuition & cost", url: "https://txwes.edu/cashier/tuition-and-cost/" },
+			{ name: "majors & degrees", url: "https://txwes.edu/admissions/majors-and-degrees/" },
+			{ name: "academic catalog", url: "http://txwes.smartcatalogiq.com/en/" },
+		],
+	},
+	"student life": {
+		category_url: "https://txwes.edu/student-life/",
+		"campus living": [
+			{ name: "housing", url: "https://txwes.edu/student-life/campus-living/housing/" },
+			{ name: "dining", url: "https://txwes.edu/student-life/campus-living/dining/" },
+		],
+		"get involved": [
+			{ name: "ramspace", url: "https://txwes.edu/student-life/get-involved/ramspace/" },
+			{ name: "morton fitness center", url: "https://txwes.edu/student-life/get-involved/morton-fitness-center/" },
+			{ name: "distance learners", url: "https://txwes.edu/student-life/get-involved/distance-learners/" },
+		],
+		"related links": [
+			{ name: "career services", url: "https://txwes.edu/student-life/student-resources/career-services/" },
+			{ name: "safety and security", url: "https://txwes.edu/security/" },
+			{ name: "health services", url: "https://txwes.edu/student-life/student-resources/health-services-timelycare/" },
+			{ name: "get funded", url: "https://txwes.edu/student-life/student-resources/get-funded/" },
+		],
+	},
+	"athletics": {
+		category_url: "https://ramsports.net/",
+		"support the rams": [
+			{ name: "ram sports", url: "https://ramsports.net/" },
+			{ name: "calendar", url: "https://ramsports.net/calendar" },
+			{ name: "live coverage", url: "https://ramsports.net/sports/2010/9/1/gen_0901103120.aspx?id=6" },
+			{ name: "photo gallery", url: "https://ramsports.net/galleries/?tab=photostore" },
+			{ name: "facilities", url: "https://ramsports.net/facilities" },
+		],
+		"related links": [
+			{ name: "staff", url: "https://ramsports.net/staff-directory" },
+			{ name: "hall of fame", url: "https://ramsports.net/honors/hall-of-fame" },
+			{ name: "shop", url: "https://txwesfanshop.merchorders.com/" },
+			{ name: "ram club", url: "https://ramsports.net/facilities" },
+		],
+	},
+	"news & events": {
+		category_url: "https://txwes.edu/news-and-events/",
+		"news & events": [
+			{ name: "news & events", url: "https://txwes.edu/news-and-events/" }
+		]
+	},
+	"alumni": {
+		category_url: "https://txwes.edu/alumni/",
+		"get involved": [
+			{ name: "Giving", url: "https://txwes.edu/alumni/giving/" },
+			{ name: "Alumni Association", url: "https://txwes.edu/alumni/get-involved/alumni-association/" },
+			{ name: "Volunteer", url: "https://txwes.edu/alumni/get-involved/volunteer/" },
+		],
+		"related links": [
+			{ name: "Annual Events", url: "https://txwes.edu/alumni/annual-events/" },
+			{ name: "Alumni News", url: "https://txwes.edu/alumni/news-and-events/" },
+			{ name: "Current Students", url: "https://txwes.edu/alumni/current-students/" },
+		],
+	},
+};
+export { navigation };

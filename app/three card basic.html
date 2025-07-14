@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content=" 160 max characters " />
+		
+		<link rel="canonical" href="https://txwes.edu/" />
+
+		<!-- robot text to follow and index for search engines -->
+		<meta name="robots" content="index,follow"><!-- All Search Engines -->
+		<meta name="googlebot" content="index,follow"><!-- Google Specific -->
+		
+		<title>Texas Wesleyan—Project Name</title>
+		
+		<!-- Fonts: Oswald , Peridot-PE-Variable  -->
+		<link rel="stylesheet" href="https://use.typekit.net/dyt3onb.css"/>
+		<link rel="stylesheet" href="css/size_indicator.css" />
+		<link rel="stylesheet" href="../css/tailwind_preflight.css" />
+		
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+		
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+		
+		<style>
+
+			
+				
+	*, 
+	::before,
+	::after{
+		font-family: peridot-pe-variable, arial, helvetica, sans-serif;
+		font-style: normal;
+		font-variation-settings: "ital" 0, "wdth" 100, "wght" 400;
+		font-size:16px;
+	}	
+		
+	main{padding:20px;}	
+	.thee_cards_basic_outer{
+	
+	}
+	.three_cards_basic_inner{
+		display: grid;
+		gap:24px;
+		
+	}
+	.three_cards_card_wrap{
+		padding:20px;
+		background-color: #f1f1f1;
+		display:grid;
+		gap:16px;
+	}
+	.three_card_img_wrap{
+		aspect-ratio:5/4;
+	}
+	.three_card_img_wrap > img{
+		height:100%;
+		width: 100%;
+		display:block;
+		object-fit: cover;
+	}
+	.three_card_text_wrap{
+		padding:10px;
+		
+	}
+	.three_card_headline{
+		font-size: 1.5rem;
+		color:#191919;
+		font-weight: 500;
+		font-variation-settings: "wght" 500;	
+	}
+	.three_card_text{}
+	.three_card_text p{
+		color:#454545;
+	
+	}
+	.three_card_footer{
+		background:#fed000;
+		& a{
+			display: block;
+			color:#002460;
+			font-weight: 500;
+			font-variation-settings: "wght" 500;
+			margin: auto;
+			text-align: center;
+			padding:6px 0px;
+		}
+	}
+		
+			
+		/* sm	640px  */  
+		@media (min-width: 640px) {  }
+		
+		/*md	768px	*/
+		@media (min-width: 768px) { 
+			
+			.three_cards_card_wrap{
+				padding:20px;
+				background-color: #f1f1f1;
+				display:grid;
+				gap:16px;
+				grid-template-rows: 180px auto 40px;
+			}
+			.three_card_img_wrap{
+				aspect-ratio:initial;
+			}
+			.three_cards_basic_inner{
+				display: grid;
+				gap:24px;
+				grid-template-columns: 1fr 1fr 1fr;
+				
+			}
+		 }
+		
+		/* lg	1024px	*/ 
+		@media (min-width: 1024px) { 
+			.three_cards_card_wrap{
+				padding:20px;
+				background-color: #f1f1f1;
+				display:grid;
+				gap:16px;
+				grid-template-rows: 240px auto 40px;
+			}
+			
+		}
+		
+		/*xl	1280px	*/
+		@media (min-width: 1280px) { 
+			.three_cards_card_wrap{
+				padding:20px;
+				background-color: #f1f1f1;
+				display:grid;
+				gap:16px;
+				grid-template-rows: 325px auto 40px;
+			}
+		 }
+		
+		/*2xl	1536px	*/ 
+		@media (min-width: 1536px) {  }
+		
+		/*3xl 2048px */
+		@media(min-width: 2048px) { }
+		</style>
+
+	</head>
+	<body>
+	  <header> </header>
+	  <main>
+		  <div class="size-indicator">
+			  <span class="xs">xs</span>
+			  <span class="sm">sm</span>
+			  <span class="md">md</span>
+			  <span class="lg">lg</span>
+			  <span class="xl">xl</span>
+			  <span class="xl2">2xl</span>
+			  <span class="xl3">3xl</span>
+		  </div>
+		  
+		  
+		<div class="thee_cards_basic_outer">
+			<div class="three_cards_basic_inner">
+			  <div class="three_cards_card_wrap">	
+				<div class="three_card_img_wrap">
+				<img src="images/summer_2025_image_3.jpg" />
+			</div>
+				<div class="three_card_text_wrap">
+				<h3 class="three_card_headline">Courses Available</h3>
+				<div class="three_card_text">
+					<p> With more than 110 courses available, there are lots of options for you to stay on track or get ahead!</p>
+				</div>
+			</div>
+				<div class="three_card_footer">
+				<a href="#">Summer Classes</a>
+			</div>
+			  </div>
+			  <div class="three_cards_card_wrap">	
+				  <div class="three_card_img_wrap">
+				  <img src="images/summer_2025_image_1.jpg" />
+			  </div>
+				  <div class="three_card_text_wrap">
+				  <h3 class="three_card_headline">Tuition & Fees</h3>
+				  <div class="three_card_text">
+					  <p> Financial aid is available for those enrolled in six (6) credit hours. Pell grant funding is prorated based on the number of credit hours enrolled. To learn more, visit with the Financial Office today! You may be able to save by getting ahead this summer</p>
+				  </div>
+			  </div>
+				  <div class="three_card_footer">
+				  <a href="#">Financial Aid</a>
+			  </div>
+				</div>
+			  <div class="three_cards_card_wrap">	
+					<div class="three_card_img_wrap">
+					<img src="images/summer_2025_image_2.jpg" />
+				</div>
+					<div class="three_card_text_wrap">
+					<h3 class="three_card_headline">Housing</h3>
+					<div class="three_card_text">
+						<p>We have place for you at Elizabeth Hall! Visit with our housing services to learn more.</p>
+					</div>
+				</div>
+					<div class="three_card_footer">
+					<a href="#">Student Housing</a>
+				</div>
+				  </div>
+			</div>
+		</div>
+		
+			
+	  </main>
+	  <footer></footer>
+	  <script>
+	   document.addEventListener("DOMContentLoaded", (event) => {
+		gsap.registerPlugin(ScrollTrigger)
+		// gsap code here!
+	   });
+	  
+	  </script>
+	</body>
+</html>

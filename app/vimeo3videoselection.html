@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content=" 160 max characters " />
+
+		<link rel="canonical" href="https://txwes.edu/" />
+
+		<!-- robot text to follow and index for search engines -->
+		<meta name="robots" content="index,follow"><!-- All Search Engines -->
+		<meta name="googlebot" content="index,follow"><!-- Google Specific -->
+
+		<title>Texas Wesleyan—Project Name</title>
+
+		<!-- Fonts: Oswald , Peridot-PE-Variable  -->
+		<link rel="stylesheet" href="https://use.typekit.net/dyt3onb.css"/>
+		<link rel="stylesheet" href="css/size_indicator.css" />
+		<link rel="stylesheet" href="../css/tailwind_preflight.css" />
+
+		<script src="https://player.vimeo.com/api/player.js"></script>
+
+		<style>
+
+
+
+		#vimeo_video_outer {
+			 width:100%;
+			  padding:0!important;
+		}
+		#vimeo_video_inner{
+			padding:1rem;
+			  background-color:#f1f1f1;
+			  border-radius:6px;
+		}
+
+		#vimeo_video_inner iframe {
+			max-width: 1000px;
+			  width:100%;
+			  aspect-ratio: 16/9;
+			  margin: auto;
+			  border: none;
+		}
+
+		.vimeo_video_selector_outer{
+
+
+		}
+
+		.vimeo_video_selector_inner{
+				padding:1rem;
+			  background-color:#f1f1f1;
+			  border-radius:6px;
+			  display: grid;
+			  gap:16px;
+			  grid-template-rows: 1fr 1fr 1fr;
+			  width: 100%;
+
+		}
+		.video_button{
+			display:grid;
+			grid-auto-flow: column;
+			width: 100%;
+			justify-content:space-between;
+			padding: 16px 24px;
+			border-radius: 6px;
+			align-items: center;
+
+		}
+
+		.video_button > h2 {
+			color:#ffffff!important;
+		}
+		.video_active{
+			background-color :#5C8CB8;
+			transition:background-color 500ms;
+
+		}
+		.video_inactive {
+			background-color: #002460;
+			box-shadow: 2px 2px 2px 0px rgba(0,0,0,0.09),7px 7px 9px 0px rgba(0,0,0,0.15);
+
+		}
+
+
+		.play_mobile{
+			display: block;
+		}
+		.play_icon{
+			display: none;
+		}
+
+		/* sm	640px  */
+		@media (min-width: 640px) {  }
+
+		/*md	768px	*/
+		@media (min-width: 768px) {
+			#vimeo_video_inner {
+			padding:2rem;
+			}
+			.play_mobile{
+				display: none;
+			}
+			.play_icon{
+				display: block;
+			}
+
+			.vimeo_video_selector_inner{
+			  padding:1rem;
+			  gap:24px;
+			  grid-template-rows: 1fr;
+			  grid-template-columns: 1fr 1fr 1fr;
+
+
+		 }
+
+		/* lg	1024px	*/
+		@media (min-width: 1024px) { }
+
+		/*xl	1280px	*/
+		@media (min-width: 1280px) {  }
+
+		/*2xl	1536px	*/
+		@media (min-width: 1536px) {  }
+
+		/*3xl 2048px */
+		@media(min-width: 2048px) { }
+		</style>
+
+	</head>
+	<body>
+	  <header> </header>
+	  <main style="max-width:1280px;">
+		  <div class="size-indicator">
+			  <span class="xs">xs</span>
+			  <span class="sm">sm</span>
+			  <span class="md">md</span>
+			  <span class="lg">lg</span>
+			  <span class="xl">xl</span>
+			  <span class="xl2">2xl</span>
+			  <span class="xl3">3xl</span>
+		  </div>
+		  <div id="vimeo_video_outer">
+			  <div id="vimeo_video_inner">
+		  <iframe src="https://player.vimeo.com/video/1021040551?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"></iframe>
+			  </div>
+			  <div class="vimeo_video_selector_outer">
+			  	<div class="vimeo_video_selector_inner">
+				  <button class="video_button video_active" aria-pressed="true" disabled>
+					  <img alt="play icon for video one" class="play_icon" src="images/play_svg_icon.svg" height="36" width="36"/>
+				  <h2>Video One Title</h2>
+					<img alt="play icon for video one" class="play_mobile" src="images/right_chevron.svg" height="24" width="24" />
+				  </button>
+				  <button class="video_button video_inactive" aria-pressed="false">
+					<img alt="play icon for video two" class="play_icon" src="images/play_svg_icon.svg" height="36" width="36"/>
+					<h2>Video two Title</h2>
+					<img alt="play icon for video two" class="play_mobile" src="images/right_chevron.svg" height="24" width="24" />
+					</button>
+				    <button class="video_button video_inactive" aria-pressed="false">
+					<img alt="play icon for video three" class="play_icon" src="images/play_svg_icon.svg" height="36" width="36"/>
+				    <h2>Video three Title</h2>
+					<img alt="play icon for video three" class="play_mobile" src="images/right_chevron.svg" height="24" width="24" />
+				    </button>
+			  	</div>
+			  </div>
+			</div>
+
+	  </main>
+
+	  <footer></footer>
+	  <script>
+		document.addEventListener("DOMContentLoaded", (event) => {
+
+	  const vid_one="https://player.vimeo.com/video/1021112685?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479";
+	  const vid_two="https://player.vimeo.com/video/1021113089?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479";
+	  const vid_three="https://player.vimeo.com/video/1021113153?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479";
+
+	  var vid_array = [vid_one,vid_two,vid_three];
+
+	  const video_frame = document.querySelector('iframe');
+	  var player = new Vimeo.Player(video_frame);
+
+	  let video_button = document.querySelectorAll('.video_button');
+
+	  video_button.forEach((ele,indx)=> ele.addEventListener('click', function () {
+		  if(!this.hasAttribute("disabled")){
+		  change_button_class(this);
+		  change_video(vid_array[indx]);
+	  }
+	  }))
+
+
+	  function change_button_class(active){
+		  video_button.forEach((element) => {
+		   element.classList.add("video_inactive");
+		   element.setAttribute("aria-pressed","false");
+		   element.disabled = false;
+	      });
+		  active.setAttribute("aria-pressed","true");
+		  active.disabled = true;
+		  active.classList.remove("video_inactive");
+		  active.classList.add("video_active");
+	  }
+
+
+	  function change_video(video_url){
+		player.pause().then(function() {
+		 	player.loadVideo(video_url);
+		}).catch(function(error) {
+		  console.log(error);
+		  })
+		};
+	  });
+	  </script>
+	</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>Texas Wesleyan—Project Name</title>
+		
+		<link rel="stylesheet" href="https://use.typekit.net/dyt3onb.css"/>
+		<link rel="stylesheet" href="../css/size_indicator.css" />
+		<link rel="stylesheet" href="../css/tailwind_preflight.css" />
+		
+		<style>
+			*,
+			*::before,
+			*::after {
+				font-family: "peridot-pe-variable", Arial, Helvetica, sans-serif;
+				box-sizing: border-box;
+				border-width: 0;
+				border-style: solid;
+				font-size: 16px;
+				color: #191919;
+				font-variation-settings: "wght" 400,"ital" 0;
+				text-transform: capitalize;
+			}
+			
+			.slide-fade-enter-active {
+			  transition: all 0.3s ease-out;
+			}
+			
+			.slide-fade-leave-active {
+			  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+			}
+			
+			.slide-fade-enter-from,
+			.slide-fade-leave-to {
+			  transform: translateX(20px);
+			  opacity: 0;
+			}
+			
+			.member_donation_outer{
+				padding: 20px;
+				max-width: 56.25rem;
+				margin: auto;
+			}
+			.donation_level{
+				margin: 8px auto 24px;
+				font-size: 20px;
+				font-variation-settings: "wght" 800;
+				color:#00417A;
+				text-align: center;
+				text-transform: capitalize;
+				max-width: 56.25rem
+
+			}
+			.donation_row_1,
+			.donation_row_2{
+				display: grid;
+				gap : 10px;
+				grid-template-columns: 1fr 1fr 1fr;
+			}
+			
+			.donation_row_2{
+				margin: 16px 0px;
+			}
+			.donation_row_3{
+				display:grid;
+				gap:10px;
+				grid-template-columns: 1fr 1fr;
+			}
+
+			
+			.member_donation{
+				padding:12px 24px;
+				border-radius: 6px;
+				background: #475078;
+				box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
+				color:#ffffff;
+				cursor: pointer;
+			}
+			
+			.benefits_outer{
+				padding:0px 20px;
+				max-width: 56.25rem;
+				margin: auto;
+
+			}
+			.benefits_outer > h3 {
+				color: #002460;
+				border-radius: 6px;
+				background: #D3C9B8;
+				font-variation-settings:"wght" 600, "ital" 1;
+				padding: 10px;
+			}
+			.benefit_chart_outer > div{
+				display:inline-grid;
+				grid-template-columns: auto 32px;
+				width:100%;
+				padding-left: 10px;
+				align-items: center;
+				gap:16px;
+			}
+			
+			.dark_text, .dark_text * {
+				color: #191919;
+				font-size:16px;
+			}
+			.light_text, .light_text * {
+				color: #575757;
+				font-size:15px;
+			}
+			
+			.benefit_icon{
+				height:32px;
+				width:32px;
+			}
+			.initial_outer, .hospitality_outer, .stewardship_outer{
+				display: flex;
+				flex-direction: column;
+				gap:10px;
+				padding: 16px 0px;
+			}
+			.donation_selected{
+				background-color:#00417A;
+				box-shadow: 0px 1px 4px 2px rgba(0, 0, 0, 0.25) inset;
+			}
+			/* sm	640px  */  
+			@media (min-width: 640px) {  }
+			
+			/*md	768px	*/
+			@media (min-width: 768px) {  }
+			
+			/* lg	1024px	*/ 
+			@media (min-width: 1024px) { 
+				.member_donation_outer{
+					padding: 24px;
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					gap: 16px;
+				}
+				
+				.donation_row_1,
+				.donation_row_2{
+					display: grid;
+					gap : 16px;
+					grid-template-columns: 1fr 1fr 1fr;
+				}
+				
+				.donation_row_2{
+					margin:  0px;
+				}
+				.donation_row_3{
+					grid-column: 1 / span 2;
+					display:grid;
+					gap:16px;
+					grid-template-columns: 1fr 1fr;
+				}
+				
+				.member_donation{
+					padding:24px 24px;
+					font-variation-settings: "wght" 500;
+					font-size:18px;
+				}
+			}
+			
+			/*xl	1280px	*/
+			@media (min-width: 1280px) {  }
+			
+			/*2xl	1536px	*/ 
+			@media (min-width: 1536px) { 
+				
+			 }
+			
+			/*3xl 2048px */
+			@media(min-width: 2048px) { }
+		</style>
+
+	</head>
+	<body>
+	  <header> </header>
+	  <main>
+		  <div id="app">
+			<div class="member_donation_outer">
+				<div class="lp_solo_cta_outer">
+					<div class="lp_solo_cta_inner">                                  					
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+				
+			 <div class="donation_row_1">	
+			  <button class="member_donation" @click="membership='student champions club',selected($event)">$20</button>
+			  
+			  <button class="member_donation" @click="membership='ram',selected($event)">$100</button>
+			  
+			  <button class="member_donation donation_selected" @click="membership='blue',selected($event)">$300</button>
+			 </div>
+			 
+			 <div class="donation_row_2">	
+
+			  <button class="member_donation" @click="membership='gold',selected($event)">$500</button>
+			  
+			  <button class="member_donation" @click="membership='coach',selected($event)">$1,000</button>
+			  
+			  <button class="member_donation" @click="membership='lifetime member',selected($event)">$2,500</button>
+			 </div>
+			 
+			 <div class="donation_row_3">	
+
+			  <button class="member_donation" @click="membership='presidential',selected($event)">$5,000</button>
+			  
+			  <button class="member_donation" @click="membership='champion',selected($event)">$10,000</button>
+			 </div>
+			 
+			</div>
+			  <h2 class="donation_level">{{membership}} Level</h2>
+			  <div class="benefits_outer">
+				<h3>Initial Benefits</h3>
+				<div class="initial_outer">
+				 	<initial-benefit :initial-benefits="benefits[membership]"></initial-benefit>
+				</div>
+				<h3>Stewardship Benefits</h3>
+					<div class="stewardship_outer">
+					 <stewardship-benefit :stewardship-benefits="benefits[membership]"></stewardship-benefit>
+					</div>
+				<h3>Hospitality Benefits</h3>
+				<div class="hospitality_outer">
+					 <hospitality-benefit :hospitality-benefits="benefits[membership]"></hospitality-benefit>
+				</div>
+			  </div>  
+		  </div>
+	  </main>
+	  <footer></footer>
+	  <script type="module">
+		  import { createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.12/vue.esm-browser.prod.min.js'
+		  import {benefits} from './benefits_data.js'
+		  import InitialBenefit from './InitialBenefit.js'
+		  import HospitalityBenefit from './HospitalityBenefit.js'
+		  import StewardshipBenefit from './StewardshipBenefit.js'
+		  createApp({
+			 components: {
+				InitialBenefit,
+				HospitalityBenefit,
+				StewardshipBenefit
+			},
+			 data(){
+				  return {
+					benefits:benefits,
+					membership:'blue',
+				  }
+			 },
+			 computed:{
+				
+			 },
+			 watch: {
+				
+			 },
+			 methods: {
+				selected(ele){
+					let buttons = document.querySelectorAll('.member_donation');
+					buttons.forEach((ele) => ele.classList.remove("donation_selected"));
+					ele.target.classList.add("donation_selected");
+				},
+							
+			 }
+			  
+		 }).mount('#app');
+
+	  </script>
+	</body>
+</html>

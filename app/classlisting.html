@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Texas Wesleyan—Project Name</title>
+
+		<link rel="stylesheet" href="https://use.typekit.net/dyt3onb.css"/>
+		<link rel="stylesheet" href="../css/size_indicator.css" />
+		<link rel="stylesheet" href="../css/tailwind_preflight.css" />
+
+		<style>
+			*,
+				*::before,
+				*::after {
+					font-family: "peridot-pe-variable", Arial, Helvetica, sans-serif;
+					font-size: 16px;
+					font-variation-settings: 'wght' 400, 'ital' 0 ;
+					color:#191919;
+					text-transform:capitalize;
+			}
+			main{background-color:#f1f1f1;}
+
+			.class_list_button_wrap{
+				display:grid;
+				grid-template-columns: 1fr 1fr;
+				gap:20px;
+				padding: 0px 20px;
+				margin-bottom: 36px;
+			}
+			button{
+				padding:12px;
+				display: block;
+				background:#002460;
+				color:#fed000;
+				border-radius: 6px;
+				float: left;
+				width:100%;
+				cursor: pointer;
+
+			}
+			.school_title{
+				font-family: Oswald;
+				font-size:28px;
+				color:191919;
+				text-transform:capitalize;
+				text-align:center;
+				font-weight: 500;
+				margin-bottom: 36px;
+			}
+			.class_cards_wrap{
+				display: grid;
+				gap:24px;
+				width: 100%;
+				place-content: center;
+			}
+			.class_list_card_outer{
+				width:350px;
+				height:340px;
+				border-radius: 6px;
+			}
+
+			.class_list_card_inner{
+				display: grid;
+				gap:24px;
+				background-color: #fefefe;
+				height: 100%;
+				width:100%;
+				padding:24px 20px 18px;
+				border-radius: 6px;
+			}
+
+			.class_list_card_title{
+				color:#00417A;font-size:20px;
+				font-variation-settings: 'wght' 700;
+			}
+
+			.class_list_card_date_wrap{
+				display:flex;
+				gap:10px;
+				flex-direction: column;
+			}
+
+			.class_list_card_date{
+				color: #454545;
+				font-family: "Peridot PE Variable";
+
+			}
+			.class_list_card_location_wrap{
+				display:inline-flex;
+				width: fit-content;
+				column-gap:36px;
+			}
+			.class_list_card_location{
+				color: #03599B;
+				font-style: normal;
+			}
+			.class_list_card_instructor{
+				color: #454545;
+				font-weight: 500;
+				font-variation-settings: 'wght' 500;
+			}
+			.class_list_card_section_wrap{
+				display: inline-flex;
+				justify-content: space-between;
+				place-self: end;
+				width: 100%;
+
+
+			}
+			.class_list_card_section_wrap:last-child{
+				text-align: end;
+			}
+			.class_list_card_section{
+				color: #454545;
+				font-family: "Peridot PE Variable";
+				font-size: 15px;
+				font-style: normal;
+				font-weight: 400;
+			}
+
+			/* sm	640px  */
+			@media (min-width: 640px) {  }
+
+			/*md	768px	*/
+			@media (min-width: 768px) {
+
+				.class_cards_wrap > div {
+					width: fit-content;
+				}
+				.class_cards_wrap > div:nth-child(even) {
+					place-self: start;
+				}
+
+				.class_cards_wrap > div:nth-child(odd) {
+
+					place-self: end;
+				}
+
+
+
+
+				.class_list_button_wrap{
+
+					grid-template-columns: 1fr 1fr 1fr;
+					gap:20px;
+					padding: 0px 20px;
+					margin-bottom: 36px;
+				}
+				.class_cards_wrap{
+					display: grid;
+					gap:24px;
+					width: 100%;
+					place-items: center;
+					grid-template-columns: 1fr 1fr;
+					padding:20px;
+				}
+
+
+			 }
+
+			/* lg	1024px	*/
+			@media (min-width: 1024px) {
+				.school_title{
+					font-size:32px;
+					margin:42px auto 40px;
+				}
+
+
+		 }
+
+			/*xl	1280px	*/
+			@media (min-width: 1280px) {
+				.class_cards_wrap{
+					grid-template-columns: 1fr 1fr 1fr;
+				}
+				.class_cards_wrap > div:nth-child(3n) {
+					place-self: start;
+				}
+
+				.class_cards_wrap > div:nth-child(3n + 1) {
+				place-self: end;
+				}
+
+				.class_cards_wrap > div:nth-child(3n + 2) {
+					place-self: center;
+				}
+
+
+
+			/*2xl	1536px	*/
+			@media (min-width: 1536px) {  }
+
+			/*3xl 2048px */
+			@media(min-width: 2048px) { }
+
+		</style>
+
+	</head>
+	<body>
+	  <header> </header>
+	  <main>
+		  <div id="app">
+			  <div class="class_list_button_wrap">
+				  <button @click="sortedAll">All Classes</button>
+				  <button @click="sortedGUP">General University Programs</button>
+			  <button @click="sortedSchoolOfEduction">School of Eduction</button>
+			  <button @click="sortedSchoolOfArts">School of Arts and Science</button>
+			  <button @click="sortedSchoolOfBusiness">School of Business Administration</button>
+			  <button @click="sortedSchoolOfHealth">School of Health Professions</button>
+			  </div>
+			  <h2 class="school_title">{{school_title}}</h2>
+			  <div class="class_cards_wrap">
+			  <div v-for="course in course_list">
+				 <div class="class_list_card_outer">
+					 <div class="class_list_card_inner">
+
+					 <h3 class="class_list_card_title">{{course.short_title}}</h3>
+					 <div class="class_list_card_date_wrap">
+					 <p class="class_list_card_date">start date: <time :datetime="convertDate(course.start_date)">{{course.start_date}}</time></p>
+					 <p class="class_list_card_date">end date: <time :datetime="convertDate(course.end_date)">{{course.end_date}}</time></p>
+					 </div>
+					 <div class="class_list_card_location_wrap">
+					 	<p class="class_list_card_location">{{course.instructional_method}}</p><p class="class_list_card_location">{{course.meeting_days}}</p>
+					 </div>
+					 <p class="class_list_card_instructor">Professor: {{course.faculty_name}}</p>
+					 <div class="class_list_card_section_wrap">
+						 <p class="class_list_card_section">{{course.term}}</p><p class="class_list_card_section">{{course.section_name}}</p>
+					 </div>
+				 </div>
+			  </div>
+		  </div>
+			  </div>
+		  </div>
+	  </main>
+	  <footer></footer>
+	  <script type="module">
+		  import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+		  import { summer_class_list} from '/dataobjects/summer_class_list.js'
+		  import {gsap} from 'https://unpkg.com/gsap?module';
+
+		  createApp({
+			 components: {
+
+			},
+			 data(){
+				  return {
+					allClasses:summer_class_list,
+					course_list:summer_class_list,
+					school_title:"All Classes"
+				  }
+			 },
+			 computed:{
+				schoolOfEducation : function (){
+				return this.allClasses.filter((object)=> object.schools == "edu")
+
+				},
+				schoolOfBusiness: function() {
+					return this.allClasses.filter((object)=> object.schools == "bus")
+
+				},
+				schoolOfHealth: function() {
+					return this.allClasses.filter((object)=> object.schools == "shp")
+
+				},
+				schoolofArts: function(){
+					return this.allClasses.filter((object)=> object.schools == "ans")
+
+				},
+				schoolofGup: function(){
+					return this.allClasses.filter((object)=> object.schools == "gup")
+
+				}
+
+			 },
+			 methods:{
+				 convertDate(date){
+					 let date_array = date.split("-");
+					 return date_array.toReversed().join("-");
+
+				 },
+				 sortedSchoolOfEduction(){
+					 this.course_list = this.schoolOfEducation;
+					 this.school_title = "School of Education"
+				 },
+				 sortedSchoolOfBusiness(){
+					 this.course_list = this.schoolOfBusiness;
+					 this.school_title = "School of Business"
+
+				 },
+				 sortedSchoolOfHealth(){
+					 this.course_list = this.schoolOfHealth;
+					 this.school_title = "School of Health Professions"
+
+				 },
+				 sortedSchoolOfArts(){
+					 this.course_list = this.schoolofArts;
+					 this.school_title = "School of Arts and Sciences"
+
+				 },
+				 sortedAll(){
+					 this.course_list = this.allClasses;
+					 this.school_title = "All Classes"
+
+				 },
+				 sortedGUP(){
+					 this.course_list = this.schoolofGup;
+					  this.school_title = "General University Programs";
+				 },
+			 },
+			watch:{
+				course_list(){
+					gsap.from('.class_list_card_outer', {
+						opacity:0,
+						stagger: {
+						each: 0.15,
+						from:'left'
+					}
+				})
+			}
+		}
+
+		 }).mount('#app');
+
+	  </script>
+	</body>
+</html>

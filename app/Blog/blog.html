@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Texas Wesleyan Blog</title>
+
+		<link rel="stylesheet" href="https://use.typekit.net/dyt3onb.css"/>
+		<link rel="stylesheet" href="../css/tailwind_preflight.css" />
+		<link rel="stylesheet" href="css/blog_min.css" />
+		<link rel="stylesheet" href="css/moreblogs.css" />
+
+	</head>
+	<body>
+		<div id="header_app">
+		<header>
+			<div class="header_title_bar_wrap">
+			<template v-if="docTitle">
+				<head-title-home></head-title-home>
+			</template>
+			<template v-else>
+				<head-title-blog></head-title-blog>
+			</template>
+			<div class="header_icons_wrap">
+				<button class="hearder_search">
+					<img src="images/icons/magnifying-glass.svg" alt="magnifying glass" />
+				</button>
+				<button class="header_menu_open" @click="openMenu" >
+				<img src="images/icons/three-bars-right copy.svg" alt="three bars menu open" />
+				</button>
+			</div>
+			</div>
+			<template v-if="openedMenu">
+			<blog-menu @close="closeMenu"></blog-menu>
+			</template>
+		</header>
+	</div>
+	  <main>
+		  <div id="main_app">
+			  <latest-blog :latest="blogs[0]"></latest-blog>
+			  <spacer-blog>Explore Further</spacer-blog>
+			  <div class="blog_content_wrap">
+			  <featured-blog :featured="featuredBlog"></featured-blog>
+			  <template v-for="blog in otherBlogs">
+				<general-blog :blog="blog"></general-blog>
+			  </template>
+			  </div>
+			  <spacer-blog>discover past articles</spacer-blog>
+			  <template v-if="showMore" >
+			  <div class="show_more_blogs_outer">
+				  <div class="show_more_bogs_inner">
+			  	<template v-for="blog in moreBlogs">
+					<show-more-blogs :blog="blog"></show-more-blogs>
+				</template>
+				  </div>
+			  </div>
+			  </template>
+		  </div>
+
+	  </main>
+	  <footer>
+			<div class="footer_outer">
+				<div class="footer_inner">
+					<div class="footer_inner_logo">
+						<a href="https://txwes.edu"><img loading="lazy" src="images/TxWesPrimaryLogo_onWhite.png" alt="Texas Wesleyan University Logo and Slogan"/></a>
+					</div>
+					<div class="footer_inner_address_wrap">
+						   <address>
+							   1201 Wesleyan Street<br>
+							   Fort Worth, TX 76105
+							   <a href="tel:817-531-4444" ><img src="images/icons/phone_icon.svg" alt="Telephone Icon" />817-531-4444</a>
+						   </address>
+					   </div>
+				   <div class="social_main footer_inner_social_media_wrap">
+					  <ul>
+					   <li class="social_icon"><a href="https://www.instagram.com/texaswesleyan/"><img loading="lazy" src="images/icons/instagram_logo.svg" alt="Instagram Logo" /></a></li>
+					   <li class="social_icon"><a href="https://www.tiktok.com/@txwes_official"><img loading="lazy" src="images/icons/tiktok_logo.svg" alt="TikTok Logo" /></a></li>
+					   <li class="social_icon"><a href="https://www.linkedin.com/edu/school?id=19510"><img loading="lazy" src="images/icons/indeed_logo.svg" alt="LinkedIn Logo" /></a></li>
+					   <li class="social_icon"><a href="http://twitter.com/texaswesleyan"><img loading="lazy" src="images/icons/x_twitter_logo.svg" alt="X Logo" /></a></li>
+					   <li class="social_icon"><a href="http://facebook.com/texaswesleyan"><img loading="lazy" src="images/icons/facebook_logo.svg" alt="Face Book Logo" /></a></li>
+					   <li class="social_icon"><a href="http://youtube.com/texaswesleyan"><img loading="lazy" src="images/icons/youtube_logo.svg" alt="YouTube Logo" /></a></li>
+					 </ul>
+				 </div>
+
+				   <div class="footer_inner_legal">
+					   <ul>
+						   <li class="legal_item_one"><a href="https://txwes.edu/admissions/what-will-it-cost/fees-costs-and-policies/university-policies/privacy-policy/">Privacy Policy</a></li>
+						   <li class="legal_item_two"><a href="https://txwes.edu/communications/resources/web-accessibility/">Accessibility Policy</a></li>
+						   <li class="legal_item_three"><a href="https://txwes.edu/admissions/financial-aid--scholarships/policies-and-consumer-information/">Policies and Consumer Information</a></li>
+						   <li class="legal_item_four"><a href="https://txwes.edu/incident-report-form/">Report an Incident</a></li>
+						   <li class="legal_item_five"><a href="#t4edittag">&copy; </a> Texas Wesleyan University</li>
+					   </ul>
+				   </div>
+				</div>
+			</div>
+		</footer>
+
+	  <script type="module">
+		  import { createApp } from 'https://cdn.jsdelivr.net/npm/vue/dist/vue.esm-browser.js'
+		  import {blogs} from './js/blogData.js'
+
+		  import HeadTitleHome from './js/header_components/HeadTitleHome.js'
+		  import HeadTitleBlog from './js/header_components/HeadTitleBlog.js'
+		  import BlogMenu from './js/header_components/BlogMenu.js'
+		  import LatestBlog from './js/main_components/LatestBlog.js'
+		  import FeaturedBlog from './js/main_components/FeaturedBlog.js'
+		  import GeneralBlog from './js/main_components/GeneralBlog.js'
+		  import ShowMoreBlogs from './js/main_components/ShowMoreBlogs.js'
+		  import SpacerBlog from './js/main_components/SpacerBlog.js'
+
+		  import {gsap} from 'https://cdn.jsdelivr.net/npm/gsap@3.12.7/+esm'
+		  import {ScrollTrigger} from 'https://cdn.jsdelivr.net/npm/gsap@3.12.7/ScrollTrigger/+esm'
+		  import {TextPlugin} from 'https://cdn.jsdelivr.net/npm/gsap@3.12.7/TextPlugin/+esm'
+
+
+			gsap.registerPlugin(ScrollTrigger,TextPlugin)
+
+
+		  const header_app = createApp({
+			 components: {
+				 HeadTitleHome,
+				 HeadTitleBlog,
+				 BlogMenu,
+			},
+			 data(){
+				  return {
+					openedMenu:false,
+					blogs:blogs.reverse,
+
+				  }
+			 },
+			 computed:{
+				docTitle(){ return document.title == "Texas Wesleyan Blog"},
+			 },
+			 featuredBlog(){
+				   return this.blogs.find((item)=> item.featured == true)
+			   },
+
+			 mounted() {
+
+				 },
+
+			 methods:{
+				 openMenu(){
+					 this.openedMenu = true;
+				 },
+				 closeMenu(){
+					 this.openedMenu = false;
+				 },
+
+			 }
+
+		 });
+		 header_app.provide( "gsap" , gsap );
+		 header_app.mount('#header_app');
+
+		 const main_app = createApp({
+			  components: {
+					LatestBlog,
+					FeaturedBlog,
+					GeneralBlog,
+					ShowMoreBlogs,
+					SpacerBlog,
+
+			 },
+			  data(){
+				   return {
+					 blogs:blogs.reverse(),
+					showMore:false,
+				   }
+			  },
+			  computed:{
+				  featuredBlog(){
+					  var nonLatest = this.blogs.slice(1);
+					  return nonLatest.find((item)=> item.featured == true)
+				  },
+				  otherBlogs(){
+					  var nonLatest = this.blogs.slice(1);
+					  var removeFeatured = nonLatest.findIndex((item)=> item.featured == true);
+					  let general = nonLatest.filter((_, i) => i !== removeFeatured);
+					  return general.slice(0, 3)
+				  },
+				  moreBlogs(){
+					  var nonLatest = this.blogs.slice(1);
+						var removeFeatured = nonLatest.findIndex((item)=> item.featured == true);
+						let general = nonLatest.filter((_, i) => i !== removeFeatured);
+						return general.slice(3)
+				  },
+
+
+
+
+			  },
+			  mounted(){
+				 ScrollTrigger.create({
+				   trigger:".blog_content_wrap",
+				   start: "bottom 80%",
+				   end: "bottom 75%",
+				   onUpdate: (self)=> {this.showMore = true; self.kill()},
+				   markers:true,
+				 });
+			  },
+			  methods:{
+
+
+			  }
+
+		  });
+		  main_app.provide( "gsap" , gsap );
+		  main_app.mount('#main_app');
+
+	  </script>
+	</body>
+</html>

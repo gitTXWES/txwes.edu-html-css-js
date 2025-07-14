@@ -1,0 +1,280 @@
+@media screen and (min-width:768px){
+/* Header Component */
+main{padding-top: 125px; }
+
+.header_title_bar_wrap{
+	padding: 24px 36px;
+	height: 125px;
+}
+.header_title{
+	font-size: 20px;
+
+}
+.header_icons_wrap{
+	gap: 36px;
+}
+.header_menu_open > img,
+.hearder_search > img,
+.header_menu_close > img {
+
+}
+.menu_outer{
+	padding: 64px;
+}
+.menu_inner{
+  padding: 80px 36px 30px;
+
+}
+.menu_nav_item{
+	margin-bottom: 48px;
+}
+.menu_nav_item > a {
+	font-size: 24px;
+
+}
+.header_menu_close{
+
+}
+
+/* Latest Blog Component */
+.latest_blog_outer{
+}
+.latest_blog_inner{}
+.latest_blog_picture_wrap{
+
+}
+.latest_blog_picture_wrap > img{
+
+}
+.latest_blog_title_wrap{
+	padding: 64px;
+	gap: 48px;
+}
+.latest_blog_title_wrap > article{
+}
+.latest_blog_label{
+	font-size: 16px;
+}
+.latest_blog_title > a{
+	font-size: 32px;
+}
+.latest_blog_description{
+}
+.latest_blog_footer{
+
+	margin-top:58px;
+}
+.latest_blog_footer_read{
+	display: inline-grid;
+	padding: 2px 0px;
+	grid-template-columns: auto auto;
+	gap: 16px;
+}
+.latest_blog_footer_read > p {
+
+}
+.latest_blog_footer_read > img {
+
+}
+.share_icon{
+
+}
+/* Featured Article Component */
+.featured_article_outer{
+	width: 100vw;
+	padding: 0 64px 64px;
+}
+.featured_article_inner{
+	gap: 48px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.featured_article_img_wrap{
+	aspect-ratio:var(--pentax);
+}
+.featured_article_inner > article{
+	display: flex;
+	flex-direction: column;
+	gap: 36px;
+	padding:0px;
+}
+
+.featured_article_label{
+
+}
+.featured_article_title a{
+	font-size:20px;
+}
+.featured_article_read{
+	display: inline-grid;
+	padding: 2px 0px;
+	grid-template-columns: auto auto;
+	gap: 16px;
+}
+.featured_article_read > p{
+	color: var(--text_gray);
+	font-variation-settings: "wght" 300;
+	padding-top: 1.5px;
+}
+.featured_article_read > img{
+	width:18px;
+}
+/* General Blog Component */
+
+.general_article_outer{
+	width: 100vw;
+	padding: 0 64px 64px;
+}
+.general_article_inner{
+		gap: 48px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+.general_article_img_wrap{
+	aspect-ratio:var(--pentax);
+}
+.general_article_inner > article{
+	display: flex;
+	flex-direction: column;
+	gap: 36px;
+	padding:0px;
+}
+
+.general_article_title a{
+	font-size:20px;
+
+}
+.general_article_read{
+	display: inline-grid;
+	padding: 2px 0px;
+	grid-template-columns: auto auto;
+	gap: 16px;
+}
+.general_article_read > p{
+	color: var(--text_gray);
+	font-variation-settings: "wght" 300;
+	padding-top: 1.5px;
+}
+.general_article_read > img{
+	width:18px;
+}
+
+/* Blog Footer */
+
+.footer_outer {
+	padding: 64px;
+
+}
+
+.footer_inner {
+	gap:48px;
+}
+
+.footer_inner_logo> a > img {
+	width: 450px;
+}
+
+.footer_inner_social_media_wrap {
+
+}
+
+.social_icon {
+	border-bottom: 2px solid transparent;
+	width: 30px;
+}
+.social_icon:last-child{
+	width: 40px;
+}
+.social_main {
+	display: block;
+}
+
+.footer_inner_social_media_wrap > ul {
+	display: inline-grid;
+	grid-auto-flow: column;
+	align-items: center;
+	gap:32px;
+
+}
+
+.social_icon:hover > a > img,
+.social_icon:focus-within {
+	transition-property: transform;
+	transition-duration: 300ms;
+	transform: translateY(-10px);
+}
+
+.social_icon:hover {
+	border-bottom: 2px solid var(--txwes_blue);
+}
+
+.social_icon>a:focus-visible {
+	outline: none;
+}
+
+.footer_inner_address_wrap {
+
+}
+
+.footer_inner_address_wrap>address {
+
+}
+
+.footer_inner_address_wrap>address>a {
+
+	margin-top:48px;
+}
+
+.footer_inner_address_wrap>address>a:focus-visible,
+.footer_inner_legal>ul>li>a:focus-visible {
+}
+
+
+.footer_inner_address_wrap>address>a>img {
+
+}
+
+
+.social_icon:focus-within,
+.footer_inner_address_wrap>address>a:focus-within,
+.footer_inner_legal>ul>li:focus-within {
+
+}
+
+
+.footer_inner_legal {
+
+}
+
+.footer_inner_legal>ul {
+
+}
+
+.footer_inner_legal>ul>li>a,
+.footer_inner_legal>ul>li {
+
+}
+
+.legal_item_one {
+
+}
+
+.legal_item_two {
+}
+
+.legal_item_three {
+}
+
+.legal_item_four {
+}
+
+.legal_item_five {
+
+}
+
+.legal_item_five>a,
+.legal_item_five {
+}
+
+}

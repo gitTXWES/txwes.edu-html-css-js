@@ -1,0 +1,196 @@
+var benefits = {
+	"student champions club": {
+		"amount": 20,
+		"initial": {
+			"enhance student-athlete experience": true,
+			"website recognition": true,
+			"champions club newsletter": true
+		},
+		"stewardship": {
+			"student champions club gift": true,
+			"member gift": false,
+			"exclusive champions club gift package": false,
+		},
+		"hospitality": {
+			"exclusive pre-game tailgating section": false,
+			"champions room access - football": false,
+			"reserved seating sid richardson center m/w basketball and volleyball": false,
+			"event benefits": true,
+			"champions club event invitations": true,
+			"champions club vip events": false,
+			"dine with a coach or the athletic director": false,
+			"field level access - football": false,
+			"lifetime champions club membership": false,
+		},
+	},
+	"ram": {
+		"amount": 100,
+		"initial": {
+			"enhance student-athlete experience": true,
+			"website recognition": true,
+			"champions club newsletter": true,
+		},
+		"stewardship": {
+
+			"student champions club gift": false,
+			"member gift": true,
+			"exclusive champions club gift package": false,
+		},
+		"hospitality": {
+			"exclusive pre-game tailgating section": false,
+			"champions room access - football": true,
+			"reserved seating sid richardson center m/w basketball and volleyball": false,
+			"event benefits": true,
+			"champions club event invitations": true,
+			"champions club vip events": false,
+			"dine with a coach or the athletic director": false,
+			"field level access - football": false,
+			"lifetime champions club membership": false,
+		},
+	},
+	"blue": {
+		"amount": 300,
+		"initial": {
+			"enhance student-athlete experience": true,
+			"website recognition": true,
+			"champions club newsletter": true,
+		},
+		"stewardship": {
+			"student champions club gift": false,
+			"member gift": true,
+			"exclusive champions club gift package": false,
+		},
+		"hospitality": {
+			"exclusive pre-game tailgating section": false,
+			"champions room access - football": true,
+			"reserved seating sid richardson center m/w basketball and volleyball": false,
+			"event benefits": true,
+			"champions club event invitations": true,
+			"champions club vip events": false,
+			"dine with a coach or the athletic director": false,
+			"field level access - football": false,
+			"lifetime champions club membership": false,
+		},
+	},
+	"gold": {
+		"amount": 500,
+		"initial": {
+			"enhance student-athlete experience": true,
+			"website recognition": true,
+			"champions club newsletter": true,
+		},
+		"stewardship": {
+			"student champions club gift": false,
+			"member gift": true,
+			"exclusive champions club gift package": false,
+		},
+		"hospitality": {
+			"exclusive pre-game tailgating section": false,
+			"champions room access - football": true,
+			"reserved seating sid richardson center m/w basketball and volleyball": false,
+			"event benefits": true,
+			"champions club event invitations": true,
+			"champions club vip events": false,
+			"dine with a coach or the athletic director": false,
+			"field level access - football": false,
+			"lifetime champions club membership": false,
+		},
+	},
+	"coach": {
+		"amount": 1000,
+		"initial": {
+			"enhance student-athlete experience": true,
+			"website recognition": true,
+			"champions club newsletter": true,
+		},
+		"stewardship": {
+			"student champions club gift": false,
+			"member gift": true,
+			"exclusive champions club gift package": false,
+		},
+		"hospitality": {
+			"exclusive pre-game tailgating section": true,
+			"champions room access - football": true,
+			"reserved seating sid richardson center m/w basketball and volleyball": true,
+			"event benefits": true,
+			"champions club event invitations": true,
+			"champions club vip events": true,
+			"dine with a coach or the athletic director": false,
+			"field level access - football": false,
+			"lifetime champions club membership": false,
+		},
+	},
+	"lifetime member": {
+		"amount": 2500,
+		"initial": {
+			"enhance student-athlete experience": true,
+			"website recognition": true,
+			"champions club newsletter": true,
+		},
+		"stewardship": {
+			"student champions club gift": false,
+			"member gift": true,
+			"exclusive champions club gift package": true,
+		},
+		"hospitality": {
+			"exclusive pre-game tailgating section": true,
+			"champions room access - football": true,
+			"reserved seating sid richardson center m/w basketball and volleyball": true,
+			"event benefits": true,
+			"champions club event invitations": true,
+			"champions club vip events": true,
+			"dine with a coach or the athletic director": false,
+			"field level access - football": false,
+			"lifetime champions club membership": true,
+		},
+	},
+	"presidential": {
+		"amount": 5000,
+		"initial": {
+			"enhance student-athlete experience": true,
+			"website recognition": true,
+			"champions club newsletter": true,
+		},
+		"stewardship": {
+			"student champions club gift": false,
+			"member gift": true,
+			"exclusive champions club gift package": true,
+		},
+		"hospitality": {
+			"exclusive pre-game tailgating section": true,
+			"champions room access - football": true,
+			"reserved seating sid richardson center m/w basketball and volleyball": true,
+			"event benefits": true,
+			"champions club event invitations": true,
+			"champions club vip events": true,
+			"dine with a coach or the athletic director": true,
+			"field level access - football": false,
+			"lifetime champions club membership": true,
+		},
+	},
+	"champion": {
+		"amount": 10000,
+		"initial": {
+			"enhance student-athlete experience": true,
+			"website recognition": true,
+			"champions club newsletter": true,
+		},
+		"stewardship": {
+			"student champions club gift": false,
+			"member gift": true,
+			"exclusive champions club gift package": true,
+		},
+		"hospitality": {
+			"exclusive pre-game tailgating section": true,
+			"champions room access - football": true,
+			"reserved seating sid richardson center m/w basketball and volleyball": true,
+			"event benefits": true,
+			"champions club event invitations": true,
+			"champions club vip events": true,
+			"dine with a coach or the athletic director": true,
+			"field level access - football": true,
+			"lifetime champions club membership": true,
+		},
+	}
+};
+export { benefits };

@@ -1,0 +1,375 @@
+	*,
+	*::before,
+	*::after {
+		font-family: Arial, Helvetica, sans-serif;
+		box-sizing: border-box;
+		border-width: 0;
+		border-style: solid;
+		margin: 0;
+	}
+
+	body {
+		scroll-behavior: smooth;
+	}
+
+	footer {
+		margin-top: 5rem;
+	}
+
+	/* Fix for images that are coded as <img src=<t4 />/> and there isn't an image on the content type */
+	.section_nav_outer {
+		border-radius: .35rem;
+		background-color: #03599B;
+		padding: 1.25rem 0;
+		width: 100%;
+	}
+
+	.section_nav_inner {
+		display: flex;
+		place-content: start;
+	}
+
+	.section_nav_inner>nav {
+		padding-left: 2rem;
+		padding-right: 2rem;
+	}
+
+	.section_nav_inner>nav>a,
+	.section_nav_inner>nav>a:visited {
+		margin: 1.25rem 0;
+		font-size: 1rem;
+		color: #ffffff;
+		width: fit-content;
+		margin-top: 2.5rem;
+		display: block;
+		font-family: Arial, Helvetica, sans-serif;
+		position: relative;
+
+	}
+
+	.section_nav_inner>nav>a:first-child {
+		margin-top: 0;
+		font-size: 2rem;
+		font-family: Oswald, Arial, Helvetica, sans-serif;
+
+	}
+
+	.section_nav_inner>nav>a::before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		border-radius: 4px;
+		background-color: #ffffff;
+		bottom: -.5rem;
+		left: 0;
+		transform-origin: right;
+		transform: scaleX(0);
+		transition: transform .2s cubic-bezier(0.45, 0, 0.55, 1);
+
+	}
+
+	.section_nav_inner>nav>a:hover::before,
+	.section_nav_inner>nav>a:focus::before {
+		transform-origin: left;
+		transform: scaleX(1);
+	}
+
+
+	img[src=""] {
+		display: none;
+	}
+
+	img[src*="googleads"] {
+		display: none;
+	}
+
+	/* fix chrome bug that displays tracking images as white box */
+	main img {
+		max-width: 100% !important;
+		height: auto !important;
+	}
+
+	aside img {
+		max-width: 100% !important;
+		height: auto !important;
+	}
+
+	#imageView_container img {
+		max-width: none !important;
+	}
+
+	/* iFrame and other embedded objects quick fix */
+
+	main iframe,
+	main object,
+	main embed,
+	main video {
+		width: 100% !important;
+	}
+
+
+	/* global UL style */
+
+	main ul {
+		list-style-image: url('https://txwes.edu/media/twu/style-assets/images/bullets/First-Level.png');
+		padding-left: 20px;
+	}
+
+	main ul li {
+		padding-left: 8px;
+		font-size: 1em;
+		line-height: 1.5em;
+		color: #333;
+	}
+
+	main ul ul {
+		list-style-image: url('https://txwes.edu/media/twu/style-assets/images/bullets/Second-Level.png');
+	}
+
+	main ul ul ul {
+		list-style-image: url('https://txwes.edu/media/twu/style-assets/images/bullets/Third-Level.png');
+	}
+
+	main ul ul ul ul {
+		list-style-image: url('https://txwes.edu/media/twu/style-assets/images/bullets/Fourth-Level.png');
+	}
+
+	main ol {
+		padding-left: 20px;
+	}
+
+	main ol li {
+		padding-left: 8px;
+		font-size: 1em;
+		line-height: 1.5em;
+		color: #333;
+	}
+
+	main sup {
+		vertical-align: middle;
+		position: relative;
+		top: -.5em;
+		font-size: 0.7em;
+	}
+
+	/* Base Layout Full Width Elements */
+
+
+	section#subheader {
+		width: 100%;
+		max-width: 1280px;
+		margin: 0px auto;
+	}
+
+	section#subheader:empty {
+		display: none;
+	}
+
+
+	section#content main {
+		width: 100%;
+		margin: 0px;
+		display: block;
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 1;
+		grid-row-end: 2;
+	}
+
+	section#content.no-nav main {
+		-ms-grid-column: 1;
+		-ms-grid-row: 1;
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 1;
+		grid-row-end: 2;
+	}
+
+	@media screen and (max-width:950px) {
+		section#content main {
+			margin-bottom: 36px;
+			overflow: auto;
+		}
+	}
+
+	main h2 {
+		font-size: 2em;
+		color: #000000;
+	}
+
+	main h3 {
+		font-size: 1.5em;
+		color: #000000;
+	}
+
+	main h4 {
+		font-size: 1.25em;
+		color: #000000;
+	}
+
+	section#content aside {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.25rem;
+		grid-column-start: 2;
+		grid-column-end: 3;
+		grid-row-start: 1;
+		grid-row-end: 2;
+		/* background-image:url('<t4 type="media" id="112641" formatter="image/path" />')*/
+	}
+
+
+	section#content aside a#back-to-top {
+		display: none;
+		border: 1px solid #ccc;
+		padding: 8px 18px;
+		text-transform: uppercase;
+		color: #666;
+		font-size: 0.9em;
+		width: 100px;
+		text-align: center;
+		margin: 0px auto;
+		clear: both;
+		margin-top: 36px;
+	}
+
+	@media screen and (max-width: 950px) {
+		section#content aside a#back-to-top {
+			display: block;
+		}
+	}
+
+	section#content main>*:first-child {
+		margin-top: 0;
+	}
+
+	section#content,
+	section#content.no-nav {
+		display: block;
+		margin: 1.25rem auto;
+		max-width: 1320px;
+		padding: 1.25rem;
+		width: 100%;
+	}
+
+
+
+	/* sm	640px  */
+	@media (min-width: 640px) {
+
+		section#content aside {
+			grid-template-columns: 1fr 1fr;
+		}
+
+
+	}
+
+	/*md	768px	*/
+	@media (min-width: 768px) {
+		section#content {
+			display: grid;
+			gap: 3.875rem;
+			grid-template-columns: auto 225px;
+			padding: 0 3.875rem;
+			margin: 2.5rem auto;
+		}
+
+		.section_nav_outer {
+			max-width: 100%;
+
+		}
+
+		section#content aside {
+			display: block;
+		}
+
+
+	}
+
+	/* lg	1024px	*/
+	@media (min-width: 1024px) {
+		section#content {
+
+			margin: 5rem auto 0;
+			padding: 0 5rem;
+			grid-template-columns: auto 225px;
+			grid-template-rows: auto;
+			gap: 5rem;
+		}
+	}
+
+	/*xl	1280px	*/
+	@media (min-width: 1280px) {
+		section#content {
+			grid-template-columns: auto 300px;
+
+		}
+
+	}
+
+	/*2xl	1536px	*/
+
+	@media (min-width: 1536px) {}
+
+	.breadcrumb_outer {
+		max-width: 1320px;
+		margin: auto auto;
+		display: none;
+	}
+
+	.breadcrumb_inner {
+		font-size: 1rem;
+		color: #454545;
+		padding: .5rem;
+		display: flex;
+		flex-direction: row;
+		place-items: center;
+		font-family: Arial, Helvetica, sans-serif;
+		text-transform: lowercase;
+	}
+
+	.breadcrumb_inner>a {
+		text-transform: lowercase;
+		text-decoration: none;
+	}
+
+	.breadcrumb_inner>a:first-child {
+		display: contents;
+	}
+
+	.breadcrumb_inner>a,
+	.breadcrumb_inner>svg,
+	.breadcrumb_inner>a>svg {
+		margin-right: .5rem;
+		color: #03599B;
+	}
+
+	/* sm	640px  */
+	@media (min-width: 640px) {}
+
+	/*md	768px	*/
+	@media (min-width: 768px) {
+		.breadcrumb_outer {
+			display: block;
+			width: 100%;
+			margin-top: 1.25rem;
+
+		}
+
+		.breadcrumb_inner {
+			padding: 0 3.875rem;
+			margin-left: .125rem;
+		}
+	}
+
+	/* lg	1024px	*/
+	@media (min-width: 1024px) {
+		.breadcrumb_inner {
+			padding: 0 5rem;
+		}
+	}
+
+	/*xl	1280px	*/
+	@media (min-width: 1280px) {}

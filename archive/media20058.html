@@ -1,0 +1,262 @@
+<!-- original content from media #20058
+
+previously untouched since March 2018 or 5years ago -->
+
+<!-- ClickTale Bottom part -->
+
+<script type='text/javascript'>
+	// The ClickTale Balkan Tracking Code may be programmatically customized using hooks:
+	//
+	//   function ClickTalePreRecordingHook() { /* place your customized code here */  }
+	//
+	// For details about ClickTale hooks, please consult the wiki page http://wiki.clicktale.com/Article/Customizing_code_version_2
+
+	document.write(unescape("%3Cscript%20src='"+
+	(document.location.protocol=='https:'?
+	"https://cdnssl.clicktale.net/www14/ptc/a426d098-96d8-4d9a-a492-8fe25526b75b.js":
+	"http://cdn.clicktale.net/www14/ptc/a426d098-96d8-4d9a-a492-8fe25526b75b.js")+"'%20type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+<!-- ClickTale end of Bottom part -->
+
+<!-- Hotjar Tracking Code for https://txwes.edu/academics/ -->
+<script>
+	(function(h,o,t,j,a,r){
+		h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+		h._hjSettings={hjid:380110,hjsv:5};
+		a=o.getElementsByTagName('head')[0];
+		r=o.createElement('script');r.async=1;
+		r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+		a.appendChild(r);
+	})(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+<!-- Zarget -->
+<script src='//cdn.zarget.com/115979/220072.js'></script>
+
+<script type="text/javascript">
+
+	// Google Analytics Event Tracking
+	document.onclick = function(event) {
+
+		event = event || window.event;
+		var target = event.target || event.srcElement,
+		targetElement = target.tagName.toLowerCase();
+
+		if (targetElement == "a") {
+			var href = target.getAttribute("href"),
+			urlHost = document.domain.replace(/^www\./i,""),
+			urlPattern = "^(?:https?:)?\/\/(?:(?:www)\.)?" + urlHost + "\/?";
+			if (href) {
+				eventCheck(href,urlPattern);
+			}
+		}
+
+		if (targetElement == "input" && target.form.action.search(/search/i) < 0) {
+			window.formAborted = true;
+		}
+
+		function eventCheck(href,urlPattern){
+			if ((href.match(/^https?\:/i)) && (!href.match(urlPattern))){
+				if (href.match(/^.*\.(pdf|jpg|png|gif|zip|mp3|txt|doc|rar|js|py)$/i)) {
+					ga('send', 'event', 'Download', 'click', href);
+					} else {
+					ga('send', 'event', 'External', 'click', href);
+				}
+				} else if (href.match(/^mailto\:/i)) {
+				ga('send', 'event', 'Email', 'click', href.substr(7));
+				} else if (href.match(/^.*\.(pdf|jpg|png|gif|zip|mp3|txt|doc|rar|js|py)$/i)) {
+				ga('send', 'event', 'Download', 'click', href);
+			}
+		}
+	};
+
+	window.onload = function () {
+		for (var x = 0; x < document.forms.length; x++) {
+			if (document.forms[x].action.search(/search/i) < 0) {
+				if (window.addEventListener) {
+					document.forms[x].addEventListener('submit',function(){
+						window.formAborted = false;
+						ga('send', 'event','Forms','Submit',window.location.href);
+					}, false);
+				}
+				else if (window.attachEvent) {
+					document.forms[x].attachEvent('onsubmit',function(){
+						window.formAborted = false;
+						ga('send', 'event','Forms','Submit',window.location.href);
+					});
+				}
+				else {
+					document.forms[x].onsubmit = "ga('send', 'event','Forms','Submit','"+window.location.href+"');";
+				}
+			}
+			else {
+				if (window.addEventListener) {
+					document.forms[x].addEventListener('submit',function(){
+						window.formAborted = false;
+						ga('send', 'event','Search',document.forms[0].getElementsByTagName('input')[0].value,window.location.href);
+					}, false);
+				}
+				else if (window.attachEvent) {
+					document.forms[x].attachEvent('onsubmit',function(){
+						window.formAborted = false;
+						ga('send', 'event','Search',document.forms[0].getElementsByTagName('input')[0].value,window.location.href);
+					});
+				}
+				else {
+					document.forms[x].onsubmit = "ga('send', 'event','Search',this.getElementsByTagName('input')[0].value,window.location.href);";
+				}
+			}
+		}
+
+		$('a').each(function (index, value) {
+			if ($('a')[index].href.search(/txwes\.edu/i) < 0 || $('a')[index].href.search(/alumni\.txwes\.edu/i) >= 0) {
+				if ($('a')[index].href.search(/javascript/i) < 0) {
+					$('a')[index].setAttribute('target','_blank')
+				}
+			}
+		});
+	};
+
+	window.onunload = function () {
+		if (formAborted) {
+			ga('send', 'event', 'Forms', 'Abort', window.location.href);
+		}
+	};
+	// Google Analytics Event Tracking End
+</script>
+
+<!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+	Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 964717196;
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+	<div style="display:inline;">
+		<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/964717196/?value=0&guid=ON&script=0"/>
+	</div>
+</noscript>
+
+<!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+	Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+	/* <![CDATA[ */
+	var google_conversion_id = 960932540;
+	var google_custom_params = window.google_tag_params;
+	var google_remarketing_only = true;
+	/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+	<div style="display:inline;">
+		<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/960932540/?value=0&guid=ON&script=0"/>
+	</div>
+</noscript>
+
+<!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 868096456;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/868096456/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+
+<script type="text/javascript">
+	if ($('.row.header .cell').length > 0) {
+		for (var i = 0; i < $('div.table').length; i++) {
+			var responsiveTableHeaderArray = [];
+			for (var x = 0; x < $('.row.header .cell',$('div.table')[i]).length; x++) {
+				responsiveTableHeaderArray.push($('.row.header .cell',$('div.table')[i])[x].innerHTML);
+			}
+			var c = 0;
+			for (var z = 0; z < $('.row .cell',$('div.table')[i]).not('.row.header .cell').length; z++) {
+				$('.row .cell',$('div.table')[i]).not('.row.header .cell')[z].setAttribute("data-head",responsiveTableHeaderArray[c]);
+				c = (c == responsiveTableHeaderArray.length - 1) ? 0 : c + 1;
+			}
+		}
+	}
+
+	$('#delink')[0].innerHTML = $('#tempdelink')[0].innerHTML;
+</script>
+
+<!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 859590359;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/859590359/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1235816873112566');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1235816873112566&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+<script type="text/javascript">
+$(document).ready(function() {
+	if($('#headerTop #mobileMenuButton').length > 0 && $('#headerTop #menu').length > 0 && $('#headerTop #menu').children().length < 1) {
+		$('#headerTop #mobileMenuButton').hide();
+	}
+});
+</script>
+
+<!-- Pingdom RUM Visitor Insights -->
+<script src="//rum-static.pingdom.net/pa-5363eeeeabe53da03da1be82.js" async></script>
+<!-- End Pingdom RUM Visitor Insights -->
+
+<-- added 7-13-23 Education Connects -->
+
+<script type="text/javascript">
+	(function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
+	vgo('setAccount', '478265947');
+	vgo('setTrackByDefault', true);
+
+	vgo('process');
+</script>
+

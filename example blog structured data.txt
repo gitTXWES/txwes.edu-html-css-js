@@ -1,0 +1,22 @@
+{"@context":"https://schema.org",
+"@type":"BlogPosting",
+"@id":"https://www.debugbear.com/blog/is-pagespeed-insights-reliable",
+"mainEntityOfPage":"https://www.debugbear.com/blog/is-pagespeed-insights-reliable",
+"url":"https://www.debugbear.com/blog/is-pagespeed-insights-reliable",
+"headline":"Is Google PageSpeed Insights Reliable?",
+"name":"Is Google PageSpeed Insights Reliable?",
+"description":"Is the data in PageSpeed Insights accurate? We take a look at how to interpret the real user data and lab results in PSI.",
+"datePublished":"2023-02-20T00:00:00.000Z",
+"dateModified":"2024-10-18T19:35:32.000Z",
+"author":[],
+"image":{"@type":"ImageObject",
+"@id":"https://www.debugbear.com/dimg/7c53ac8b7a9ff267ec6b2ac62b291d2f.png",
+"url":"https://www.debugbear.com/dimg/7c53ac8b7a9ff267ec6b2ac62b291d2f.png",
+"contentUrl":"https://www.debugbear.com/dimg/7c53ac8b7a9ff267ec6b2ac62b291d2f.png",
+"caption":"title image for the blog post: Is Google PageSpeed Insights Reliable?"
+},
+"keywords":[],
+"isPartOf":{"@type":"Blog","@id":"https://www.debugbear.com/blog",
+"name":"Blog"}
+}
+

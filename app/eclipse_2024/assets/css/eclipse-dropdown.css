@@ -1,0 +1,121 @@
+.drop_down_outer{
+	position: absolute;
+	width: 100%;
+	background-color: #000D23;
+	z-index: 10;
+	width: calc(100% - 48px);
+}
+.drop_title_wrap > div > #timer_wrap {
+	margin-top:0px;
+	place-content: center;
+}
+.drop_title_wrap > #timer_wrap > .time_unit > span {
+	padding:0px;
+	font-size: 1.125rem;
+}
+.drop_down_inner{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: var(--card-gradient);
+	border-radius: 10px;
+	padding-bottom: 16px;
+
+}
+.drop_down_close{
+	cursor:pointer;
+}
+.inner_header_dropdown_closed:hover,
+.inner_header_dropdown_closed:active,
+.drop_down_close:hover,
+.drop_down_close:active{
+	filter:brightness(1.125);
+	transform: scale(1.15);
+}
+
+
+.drop_title_wrap{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.drop_title_wrap > div > h2 {
+	font-size: 26px;
+	color:#fed000;
+	font-family: Oswald, Helvetica, sans-serif;
+	font-weight: 400;
+}
+
+.dropdown-enter-active, .dropdown-leave-active{
+	transition-property: top;
+	transition-duration: .4s;
+	transition-timing-function: ease-in-out;
+}
+.dropdown-enter-to{
+	top:12px;
+}
+
+.dropdown-enter-from{
+	top:-100px
+}
+.dropdown-leave-to{
+	top:-100px;
+}
+.dropdown-leave-from{
+	top:12px;
+}
+.dropdown_img_wrap{
+	display:none;
+}
+/* sm	640px  */
+@media (min-width: 640px) {  }
+
+/*md	768px	*/
+@media (min-width: 768px) {
+	.drop_down_outer{
+			width: calc(100% - 72px);
+	}
+	.drop_down_inner{
+		padding:0px 24px 24px;
+	}
+	.drop_title_wrap{
+		/* align-self: flex-end; */
+		align-items: center;
+		flex-direction: row;
+		width: 100%;
+		justify-content: space-between;
+	}
+	.dropdown_img_wrap{
+		display:block;
+		width:130px;
+	}
+	.drop_title_wrap > div >h2 {
+		margin-bottom: 10px;
+	}
+	.drop_title_wrap > div > #timer_wrap {
+		width: 100%;
+		justify-content: flex-end;
+	}
+  }
+
+/* lg	1024px	*/
+@media (min-width: 1024px) {
+	.drop_title_wrap {
+		justify-content: space-around;
+	}
+	.drop_down_inner{
+		padding:0px 36px 30px;
+	}
+	.dropdown_img_wrap{
+		width:145px;
+	}
+	.drop_title_wrap > div >h2 {
+		font-size:28px;
+	}
+ }
+
+/*xl	1280px	*/
+@media (min-width: 1280px) {  }
+/*2xl	1536px	*/
+
+@media (min-width: 1536px) {  }

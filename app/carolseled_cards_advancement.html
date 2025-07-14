@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content=" 160 max characters " />
+
+		<link rel="canonical" href="https://txwes.edu/" />
+
+		<!-- robot text to follow and index for search engines -->
+		<meta name="robots" content="index,follow"><!-- All Search Engines -->
+		<meta name="googlebot" content="index,follow"><!-- Google Specific -->
+
+		<title>Texas Wesleyan—Project Name</title>
+
+		<!-- Fonts: Oswald , Peridot-PE-Variable  -->
+		<link rel="stylesheet" href="https://use.typekit.net/dyt3onb.css"/>
+		<link rel="stylesheet" href="css/size_indicator.css" />
+		<link rel="stylesheet" href="../css/tailwind_preflight.css" />
+
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+		<style>
+		*,
+		::before,
+		::after{
+			font-family: peridot-pe-variable, arial, helvetica, sans-serif;
+			font-style: normal;
+			font-variation-settings: "ital" 0, "wdth" 100, "wght" 400;
+			font-size:16px;
+			color:#191919;
+			border-radius: 6px;
+			line-height: 1.5;
+
+		}
+		.carouseled_card_stack_outer{
+			width:100%;
+			padding:20px;
+			background-color:#002460;
+			background: hsla(206, 96%, 31%, 1);
+			background: linear-gradient(298deg, hsla(206, 96%, 31%, 1) 0%, hsla(218, 100%, 19%, 1) 35%);
+			background: -moz-linear-gradient(298deg, hsla(206, 96%, 31%, 1) 0%, hsla(218, 100%, 19%, 1) 35%);
+			background: -webkit-linear-gradient(298deg, hsla(206, 96%, 31%, 1) 0%, hsla(218, 100%, 19%, 1) 35%);
+			height: 100vh;
+			margin: auto;
+			border-radius: 0px;
+			position: relative;
+		}
+		.carouseled_card_stack_inner{
+			display:grid;
+			position: relative;
+			grid-template-rows: 300px 1fr;
+			height:100%;
+			gap:20px;
+
+		}
+		.carouseled_card_stack{
+			position: relative;
+			width: 100%;
+		}
+		.carouseled_card{
+			aspect-ratio: 4/5;
+			width:200px;
+			background-color: #ffffff;
+			position: absolute;
+			top:50%;
+			left:45%;
+  		  	transform: translate(-50%, -50%);
+			box-shadow: 2px 2px 2px #191919;
+			border: 4px solid #f1f1f1;
+			filter:brightness(1)
+		}
+		.carouseled_card > img{
+			object-fit: cover;
+			height: 100%;
+			width: 100%;
+		}
+
+		.carouseled_card_paragraph_wrap{
+			display: flex;
+			flex-direction: column;
+			place-items: center;
+			padding:0px 10px;
+		}
+		.carouseled_card_paragraph{
+			color: #ffffff;
+			text-align: center;
+		}
+		.carouseled_card_cta{
+			padding:8px 12px;
+			background-color: #fed000;
+			margin-top: 20px;
+			display: block;
+		}
+		.carouseled_card_cta:hover, .carouseled_card_cta:focus-visible,.card_pause:hover, .card_restart:hover, .card_resume:hover,.card_next:hover,.card_pause:focus-visible, .card_restart:focus-visible, .card_resume:focus-visible,.card_next:focus-visible {
+			outline: 2px solid #fed000;
+			outline-offset : 4px;
+		}
+
+		.carouseled_card_cta > span {
+			color:#002460;
+		}
+
+		.carouseled_card_paragraph_wrap > h2{
+				font-family: Oswald, Arial, Helvetica, sans-serif;
+				font-size: 24px;
+				color:#fed000;
+				margin-bottom:20px;
+				text-transform: capitalize;
+		}
+		.card_pause, .card_restart, .card_resume, .card_next{
+			height:36px;
+			width: 36px;
+			color:#f9f9f9;
+			position:absolute;
+			bottom:-20px;
+			left:50%;
+			transform: translateX(-50%);
+		}
+
+		.hide_button{
+			display: none;
+		}
+		/* sm	640px  */
+		@media (min-width: 640px) {
+			.carouseled_card{
+				width:252px;
+		 }
+
+		 .carouseled_card_stack_inner{
+			 grid-template-rows: 350px 1fr;
+		 }
+		 .carouseled_card_paragraph_wrap{
+			 padding: 48px;
+		 }
+		 .card_pause, .card_restart, .card_resume, .card_next{
+		 	 bottom:-36px;
+		 }
+ 		}
+
+		/*md	768px	*/
+		@media (min-width: 768px) {
+			.carouseled_card_stack_outer{
+				height: auto;
+			}
+			.carouseled_card{
+				width:300px;
+			 }
+			.carouseled_card_stack_inner{
+				grid-template-rows: 450px 1fr;
+			}
+
+			.carouseled_card_paragraph{
+				text-align: left;
+				text-indent: 20px;
+				line-height: 1.6;
+			}
+
+			.carouseled_card_cta{
+				background-color: #fed000;
+				margin-top: 36px;
+				display: block;
+				font-size: 18px;
+				padding: 12px 48px;
+			}
+
+			.carouseled_card_paragraph_wrap > h2{
+					font-family: Oswald, Arial, Helvetica, sans-serif;
+					font-size: 36px;
+					color:#fed000;
+					margin-bottom:36px;
+					text-transform: capitalize;
+			}
+
+		 }
+
+		/* lg	1024px	*/
+		@media (min-width: 1024px) {
+			.carouseled_card_stack_outer{
+				height:auto;
+				padding:0px;
+				max-width: 100vw;
+				background: linear-gradient(279deg, hsla(206, 96%, 31%, 1) 0%, hsla(218, 100%, 19%, 1) 68%);
+				background: -moz-linear-gradient(279deg, hsla(206, 96%, 31%, 1) 0%, hsla(218, 100%, 19%, 1) 68%);
+				background: -webkit-linear-gradient(279deg, hsla(206, 96%, 31%, 1) 0%, hsla(218, 100%, 19%, 1) 68%);
+			}
+
+			.carouseled_card {
+				width:252px;
+				top:48%;
+			 }
+
+			.carouseled_card_stack_inner{
+				grid-template-rows: auto;
+				grid-template-columns: 1fr .75fr;
+				padding:48px;
+				gap:24px;
+				place-items: normal;
+			}
+			.carouseled_card_paragraph_wrap{
+				order:-1;
+				padding:0px;
+			}
+
+			.carouseled_card_paragraph_wrap > h2{
+					font-family: Oswald, Arial, Helvetica, sans-serif;
+					font-size: 36px;
+					place-self: start;
+					color:#fed000;
+					margin-bottom:36px;
+					text-transform: capitalize;
+			}
+
+			.carouseled_card_paragraph{
+				text-align: left;
+				text-indent: 20px;
+				line-height: 1.6;
+			}
+
+			.carouseled_card_cta{
+				background-color: #fed000;
+				margin-top: 36px;
+				display: block;
+				padding: 10px 48px;
+				place-self: start;
+			}
+			.card_pause, .card_restart, .card_resume, .card_next{
+				height:36px;
+				width: 36px;
+				color:#f9f9f9;
+				position:absolute;
+				bottom:24px;
+				left:0px;
+				transform: translateX(0%);
+			}
+		}
+
+		/*xl	1280px	*/
+		@media (min-width: 1280px) {
+			.carouseled_card_stack_inner{
+				grid-template-columns: 1fr .55fr;
+				padding:64px;
+			}
+			.card_pause, .card_restart, .card_resume, .card_next{
+				bottom:0px;
+			}
+		 }
+
+		/*2xl	1536px	*/
+		@media (min-width: 1536px) {  }
+
+		/*3xl 2048px */
+		@media(min-width: 2048px) { }
+
+
+		</style>
+
+	</head>
+	<body>
+	  <header> </header>
+	  <main>
+		  <div class="size-indicator">
+			  <span class="xs">xs</span>
+			  <span class="sm">sm</span>
+			  <span class="md">md</span>
+			  <span class="lg">lg</span>
+			  <span class="xl">xl</span>
+			  <span class="xl2">2xl</span>
+			  <span class="xl3">3xl</span>
+		  </div>
+		  <div style="height:100vh;"></div>
+		<div class="carouseled_card_stack_outer">
+		  <div class="carouseled_card_stack_inner">
+			<div class="carouseled_card_stack">
+				<div class="carouseled_card">
+					<img src="images/doggySnowDay.jpeg" alt"jedi dog" />
+				</div>
+				<div class="carouseled_card">
+					<img src="images/doogo_christmas.jpeg" alt"jedi dog" />
+				</div>
+				<div class="carouseled_card">
+					<img src="images/timmy.jpg" alt"jedi dog" />
+				</div>
+				<div class="carouseled_card">
+					<img src="images/movein 6 by 5.webp" alt"jedi dog" />
+				</div>
+				<div class="carouseled_card last">
+					<img src="images/doggyJedi.jpeg" alt"jedi dog" />
+				</div>
+				<button class="card_pause hide_button" role="button"><img src="images/pause_svg_icon.svg"></button>
+				<button class="card_resume hide_button" role="button"><img src="images/play_svg_icon.svg"></button>
+				<button class="card_restart hide_button" role="button"><img src="images/restart_icon_white.svg"></button>
+				<button class="card_next hide_button" role="button"><img src="images/right_arrow_circle.svg"></button>
+			</div>
+			<div class="carouseled_card_paragraph_wrap">
+				<h2>We accept Gyros</h2>
+				<p class="carouseled_card_paragraph">Our Smaller. Smarter. approach isn't just a tagline; it’s a commitment to fostering genuine connections. It’s a professor's guidance that illuminates a student's true calling, a coach’s encouragement after a tough game, a student life staff member’s support that eases the transition to university life — these moments are the building blocks of dreams. They empower our students to become more than just graduates; they become the movers and shakers of tomorrow.</p>
+				<a class="carouseled_card_cta" href="#">
+					<span>Give Today</span>
+				</a>
+			</div>
+			</div>
+
+
+		</div>
+		<div style="height:100vh;"></div>
+
+	  </main>
+	  <footer></footer>
+	  <script>
+	   document.addEventListener("DOMContentLoaded", (event) => {
+		gsap.registerPlugin(ScrollTrigger)
+
+		let carousel_cards = gsap.utils.toArray('.carouseled_card');
+		let scale_value = 1;
+		let card_scale = 1.03;
+		let card_zIndex = 10;
+		let card;
+		let iteration = 0;
+		let master_card_timeLine = gsap.timeline();
+
+		const restart_button = document.querySelector(".card_restart");
+		const resume_button = document.querySelector(".card_resume");
+		const pause_button = document.querySelector(".card_pause");
+		const card_next = document.querySelector(".card_next");
+		const carouseled_card_stack = document.querySelector(".carouseled_card_stack");
+		let reduceMotion = check_reduced_motion();
+
+
+		function check_reduced_motion(){
+			const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+			return prefersReducedMotion.matches
+		}
+
+
+
+		carousel_cards.reverse().forEach((card,index) => {
+			let init_tl = gsap.set(card,{
+				x: () => index * 20 ,
+				scale : card_scale -= .03,
+				zIndex: card_zIndex -=1,
+			})
+		})
+
+		const carouselTrigger = ScrollTrigger.create({
+		trigger: '.carouseled_card_stack_outer',
+		start: 'top center',
+		end: 'bottom center',
+		once:true,
+		onEnter:()=>{ reduceMotion?reduced_start():normal_start() }
+	})
+
+		function normal_start(index){
+			pause_button.classList.toggle("hide_button");
+			start_master_card_timeLine(carousel_cards[0])
+
+		}
+		function reduced_start(){
+			card_next.classList.toggle("hide_button");
+		}
+
+		function reduced_motion_MT(card){
+			master_card_timeLine
+			   .add(rotate_top_card(card))
+			   .add(shuffle_up(card))
+			   .add(slide_deck())
+			   .add(card_to_back(card),"<")
+		}
+
+		function pause_masterTL (){
+			master_card_timeLine.pause();
+			pause_button.classList.toggle("hide_button");
+			resume_button.classList.toggle("hide_button");
+		}
+
+		function resume_masterTL(){
+			master_card_timeLine.resume() ;
+			pause_button.classList.toggle("hide_button");
+			resume_button.classList.toggle("hide_button");
+		}
+
+		function show_restart_setup(){
+			if(!master_card_timeLine.isActive() && iteration >= 10){
+				pause_button.classList.toggle("hide_button");
+
+				restart_button.classList.toggle("hide_button");
+				iteration = 0;
+
+			}
+		}
+
+		function show_restart (){
+			restart_button.classList.toggle("hide_button");
+			pause_button.classList.toggle("hide_button");
+			start_master_card_timeLine(carousel_cards[0]);
+
+		}
+
+
+		function start_master_card_timeLine(card){
+			iteration++
+			if (iteration <= 10) {
+			master_card_timeLine
+			   .add(rotate_top_card(card))
+			   .add(shuffle_up(card))
+			   .add(slide_deck())
+			   .add(card_to_back(card),"<")
+		} else {
+			show_restart_setup();
+		}
+	}
+
+
+		function rotate_top_card(card){
+			cardTL= gsap.timeline();
+			card.tagName == "DIV"?true:card = card.parentNode;
+			cardTL.to(card,{
+				rotationY:75,
+				rotationZ:10,
+				skewY:10,
+				x:"-60%",
+				y:"-20%",
+				duration:reduceMotion?0:1.8,
+				filter:"brightness(.6)",
+				ease:"back.in(1.5)",
+			    delay:reduceMotion?.08:1.8
+			})
+			return cardTL;
+		}
+
+
+	   function shuffle_up(card) {
+		   cardTL= gsap.timeline();
+		   card.tagName == "DIV"?true:card = card.parentNode;
+		   card.remove();
+		   carouseled_card_stack.insertAdjacentElement("afterbegin",card);
+		   carousel_cards = gsap.utils.toArray('.carouseled_card');
+		   card_zIndex = 10;
+		   carousel_cards.reverse().forEach((card,index) => {
+			   cardTL.set(card,{
+				   zIndex: card_zIndex -=1,
+			   });
+		 })
+		   return cardTL
+	   }
+
+	   function slide_deck(){
+		   cardTL= gsap.timeline();
+		   let remaining_cards = carousel_cards.filter((ele,index) => index < 4);
+		   	cardTL.to(remaining_cards,{
+				   scale: "+=.03",
+				   x:"-=20",
+				   duration:reduceMotion?0:.08,
+			   })
+		   return cardTL;
+	   }
+	   function card_to_back(card){
+		   card.tagName == "DIV"?true:card = card.parentNode;
+		   cardTL= gsap.timeline();
+		   cardTL.to(card,{
+			   rotationY:0,
+			   rotationZ:0,
+			   skewY:0,
+			   x:"80px",
+			   y:"0px",
+			   scale:.88,
+			   duration:reduceMotion ? 0:.65,
+			   filter:"brightness(1)",
+			   ease:"back.out(1.5)",
+			   onComplete:()=>{reduceMotion?false:start_master_card_timeLine(carousel_cards[0])}
+		   })
+		   return cardTL;
+	   }
+
+	   resume_button.addEventListener("click",() => resume_masterTL())
+	   pause_button.addEventListener("click",() => pause_masterTL())
+	   restart_button.addEventListener("click",()=>{ show_restart(carousel_cards[0])})
+	   card_next.addEventListener("click", ()=> reduced_motion_MT(carousel_cards[0]))
+
+	  });
+	  </script>
+	</body>
+</html>
