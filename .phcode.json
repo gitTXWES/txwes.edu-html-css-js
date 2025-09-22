@@ -1,0 +1,7 @@
+{
+    "livePreviewUseDevServer": false,
+    "livePreviewServerURL": "http://localhost",
+    "livePreviewServerProjectPath": "/app",
+    "livePreviewHotReloadSupported": true,
+    "livePreviewFramework": "Custom"
+}

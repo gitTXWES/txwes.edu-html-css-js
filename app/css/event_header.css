@@ -1,0 +1,136 @@
+            *, 
+            ::before,
+            ::after{
+                font-family: peridot-pe-variable, arial, helvetica, sans-serif;
+                font-style: normal;
+                font-variation-settings: "ital" 0, "wdth" 100, "wght" 400;
+                font-size:16px;
+                border-radius: 6px;
+            }
+            main{padding:20px;}
+
+                .month_display_outer {
+                    width: auto;
+                    display: grid;
+                    grid-template-columns: auto;
+                    grid-template-rows: auto auto;
+                    grid-template-areas: "top" "bottom";
+                    gap:20px
+                }
+                .month_display_inner {
+                    display: flex;
+                    background-color: #fed000;
+                    padding:4px 20px;
+                    width: auto;
+                    justify-content: space-between;
+                    align-items: center;
+                    grid-area: bottom;
+                }
+                .month_display {
+                    font-size: 20px;
+                    font-variation-settings: "ital" 0, "wdth" 100, "wght" 500;
+                    color: #002460;
+                }
+                .month_button_wrapper {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 36px;
+                }
+                
+                .month_button{
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                    width: 18px;
+                    height: 18px;
+            }
+                .alternative_calendars_wrapper{
+                    grid-area: top;
+                }
+                .alternative_calendar_item {
+                    margin:16px 0 0 0;
+                }
+                .alternative_calendars_item > a {
+                    color:#191919;
+                    font-size: 18px;
+                    font-variation-settings: "ital" 0, "wdth" 100, "wght" 450;
+                }
+                .alternative_calendar_item > a > img {
+                    margin: 0 0 4px 8px;
+                    width: 18px;
+                    height: 18px;
+                    display: inline-block;
+                }
+                   
+                
+           
+            /* sm 640px  */
+            @media (min-width: 640px) {
+            }
+            
+            /*md 768px*/
+            @media (min-width: 768px) {
+                .month_display_outer {
+                    width: auto;
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    grid-template-rows: auto;
+                    grid-template-areas: "left right";
+                    gap:20px;
+                }
+                .month_display_inner {
+                    grid-area: left;
+                    width: 250px;
+                }
+                
+                .alternative_calendars_wrapper{
+                    grid-area: right;
+                }
+                .alternative_calendars_list {
+                      display: flex;
+                      gap: 16px;
+                      align-items: flex-end;
+                      height: 100%;
+                }
+                .alternative_calendar_item {
+                    margin:0 0 0 0;
+                }
+                .alternative_calendars_item > a {
+                    color:#191919;
+                    font-size: 16px;
+                    font-variation-settings: "ital" 0, "wdth" 100, "wght" 450;
+                }
+                .alternative_calendar_item > a > img {
+                    margin: 0 0 4px 8px;
+                    width: 16px;
+                    height: 16px;
+                    display: inline-block;
+                }
+            }
+            /* lg 1024px */
+            @media (min-width: 1024px) {
+                 .month_display_outer {
+                    width: auto;
+                    display: grid;
+                    grid-template-columns: 300px auto;
+                 }
+                  .alternative_calendars_list {
+                      display: flex;
+                      gap: 24px;
+                  }
+                  .alternative_calendars_item > a {
+                    color:#191919;
+                    font-size: 18px;
+                    font-variation-settings: "ital" 0, "wdth" 100, "wght" 475;
+                }
+            }
+            /*xl 1280px*/
+            @media (min-width: 1280px) {
+            }
+            /*2xl 1536px*/
+            @media (min-width: 1536px) {
+            }
+            /*3xl 2048px */
+            @media(min-width: 2048px) {
+            }

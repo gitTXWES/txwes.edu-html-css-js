@@ -1,0 +1,6 @@
+{
+  "workspace.preview_append_paths" : true,
+  "workspace.preview_root" : "app",
+  "workspace.preview_type" : "custom",
+  "workspace.preview_url" : "localhost"
+}

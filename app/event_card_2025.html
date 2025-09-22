@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="160 max characters" />
+    <link rel="canonical" href="https://txwes.edu/" />
+    <!-- robot text to follow and index for search engines -->
+    <meta name="robots" content="index,follow"><!-- All Search Engines -->
+    <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+    <title>Texas Wesleyan—Project Name</title>
+    <!-- Fonts: Oswald , Peridot-PE-Variable  -->
+    <link rel="stylesheet" href="https://use.typekit.net/dyt3onb.css" />
+    <link rel="stylesheet" href="css/size_indicator.css" />
+    <link rel="stylesheet" href="css/tailwind_preflight.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <style>
+         *,
+        ::before,
+        ::after {
+            font-family: Peridot-PE-Variable, arial, helvetica, sans-serif;
+            font-style: normal;
+            font-variation-settings: "ital" 0, "wdth" 100, "wght" 400;
+            font-size: 16px;
+            border-radius: 6px;
+        }
+        main{
+            padding: 20px;
+        }
+       .event_container_outer {
+        margin:0;
+        padding:0;
+       }
+
+        .event_container_inner {
+            padding: 24px;
+            display: grid;
+            background-color: #00417a;
+            grid-template-columns: 86px auto;
+            grid-template-rows: auto;
+            column-gap: 24px
+        }
+
+        .event_date_pill_outer {
+            width: 85px;
+            height: 110px;
+        }
+
+        .event_date_pill_inner {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+
+        }
+        .pill_date>time{
+            text-transform: uppercase;
+        }
+        .pill_date>time,
+        .pill_time>time {
+            font-variation-settings: "ital" 0, "wdth" 100, "wght" 600;
+            font-size: 14px;
+            padding: 0 16px;
+            width: 100%;
+            line-height: 1.2;
+        }
+
+        .pill_date,
+        .pill_time {
+            background-color: #fefefe;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .pill_time {
+            background-color: #FFF8D9;
+            border-radius: 0 0 6px 6px;
+        }
+
+        .event_text_wrap {
+            display: flex;
+            gap: 24px;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+
+        .event_title>h2 {
+            color: #fefefe;
+            font-size: 16px;
+            font-variation-settings: "ital" 0, "wdth" 100, "wght" 475;
+            line-height: 1.2;
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .event_detail_link>a,
+        .event_detail_link>a:visited {
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 8px
+        }
+
+        .event_detail_link>a>span {
+            color: #fed000;
+            font-size: 14px;
+            font-variation-settings: "ital" 0, "wdth" 100, "wght" 400;
+            padding-top: 1px;
+        }
+
+        .event_detail_link>a>img {
+            width: 14px;
+            height: 14px;
+            transform: translateY(2px);
+        }
+
+        .event_image_wrap {
+            display: none;
+        }
+
+       
+
+        /* sm 640px  */
+        @media (min-width: 640px) {
+          
+        }
+
+        /*md 768px*/
+        @media (min-width: 768px) {}
+
+        
+
+        /* lg 1024px */
+        @media (min-width: 1024px) {
+        .event_container_outer {
+            max-width:768px;
+            
+        }
+
+        .event_container_inner {
+            padding:0;
+            display: grid;
+            background-color: #00417a;
+            grid-template-columns: auto auto;
+            grid-template-rows: 104px auto;
+            column-gap: 24px;
+            place-content: space-between;
+        }
+
+        .event_date_pill_outer {
+            width: 275px;
+            height: 60px;
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.25), 1px 4px 4px 0 rgba(0, 0, 0, 0.10);
+            margin: 24px 0 0 24px;
+        }
+
+        .event_date_pill_inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-items: auto; 
+            width: 100%;
+            height: 100%;
+            
+        }
+        .pill_date>time{
+            text-transform: uppercase;
+        }
+        .pill_date>time,
+        .pill_time>time {
+            font-variation-settings: "ital" 0, "wdth" 100, "wght" 600;
+            font-size: 14px;
+            padding: 0px;
+            line-height: 1.2;
+        }
+
+        .pill_date,
+        .pill_time {
+            font-variation-settings: "ital" 0, "wdth" 100, "wght" 600;
+            font-size: 14px;
+            padding: 12px 16px 0px;
+            width: 100%;
+            line-height: 1.2;
+            background-color: #fefefe;
+            display: block;;
+        }
+
+        .pill_time {
+            background-color: #FFF8D9;
+            border-radius: 0 6px 6px 0;
+        }
+         .pill_date{
+            border-radius: 6px 0px 0 6px;
+        }
+        .pill_time > time > br{
+            display: none;
+        }
+        .event_text_wrap {
+            display: flex;
+            gap: 24px;
+            flex-direction: column;
+            height: 100%;
+            justify-content: inherit;
+            cursor: pointer;
+            grid-column-start: 1;
+            margin: 0px 0px 0 24px;
+            padding: 0 0 24px;
+        }
+
+        .event_title>h2 {
+            color: #fefefe;
+            font-size: 18px;
+            font-variation-settings: "ital" 0, "wdth" 100, "wght" 475;
+            line-height: 1.2;
+            padding: 0;
+            margin: 0;
+        }
+
+
+        .event_detail_link>a,
+        .event_detail_link>a:visited {
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 8px
+        }
+
+        .event_detail_link>a>span {
+            color: #fed000;
+            font-size: 14px;
+            font-variation-settings: "ital" 0, "wdth" 100, "wght" 400;
+            padding-top: 1px;
+        }
+
+        .event_detail_link>a>img {
+            width: 14px;
+            height: 14px;
+            transform: translateY(2px);
+        }
+
+        .event_image_wrap {
+            display: block;
+            grid-column-start: 2;
+            grid-row: 1 / span 2;
+            width: 174px;
+            overflow: hidden;
+            aspect-ratio: 5/7;
+        }
+        .placeholder_for_image{
+           
+           height : 100%;
+            background-color: gray;
+        }
+        .placeholder_for_image, .event_image_wrap{
+            border-radius: 0 6px 6px 0;
+            object-fit: cover;
+        }
+        }
+
+        /*xl 1280px*/
+        @media (min-width: 1280px) {
+            .event_container_outer {}
+            .event_container_inner {}
+            .event_date_pill_outer {}
+            .event_date_pill_inner {}
+            .pill_date {}
+            .pill_time {}
+            .event_text_wrap {}
+            .event_title {}
+            .event_detail_link {}
+            .event_image_wrap {}
+            .placeholder_for_image {}
+        }
+
+        /*2xl 1536px*/
+        @media (min-width: 1536px) {
+            .event_container_outer {}
+            .event_container_inner {}
+            .event_date_pill_outer {}
+            .event_date_pill_inner {}
+            .pill_date {}
+            .pill_time {}
+            .event_text_wrap {}
+            .event_title {}
+            .event_detail_link {}
+            .event_image_wrap {}
+            .placeholder_for_image {}
+        }
+
+        /*3xl 2048px */
+        @media(min-width: 2048px) {
+            .event_container_outer {}
+            .event_container_inner {}
+            .event_date_pill_outer {}
+            .event_date_pill_inner {}
+            .pill_date {}
+            .pill_time {}
+            .event_text_wrap {}
+            .event_title {}
+            .event_detail_link {}
+            .event_image_wrap {}
+            .placeholder_for_image {}
+        }
+    </style>
+</head>
+
+<body>
+    <header> </header>
+    <main>
+        <div class="size-indicator">
+            <span class="xs">xs</span>
+            <span class="sm">sm</span>
+            <span class="md">md</span>
+            <span class="lg">lg</span>
+            <span class="xl">xl</span>
+            <span class="xl2">2xl</span>
+            <span class="xl3">3xl</span>
+        </div>
+        <div class="event_container_outer">
+            <div class="event_container_inner">
+                <div class="event_date_pill_outer">
+                    <div class="event_date_pill_inner">
+                        <div class="pill_date">
+                            <time datetime="2023-10-01">Fri <br>Nov 29</time>
+                        </div>
+                        <div class="pill_time">
+                            <time datetime="10:00">10:00 <br>a.m.</time>
+                        </div>
+                    </div>
+                </div>
+                <div class="event_text_wrap">
+                    <div class="event_title">
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u</h2>
+                    </div>
+                    <div class="event_detail_link">
+                        <a href="#"><span>details</span><img src="images/ui icons/new-window_yellow.svg"
+                                alt="new window icon" /></a>
+                    </div>
+                </div>
+                <div class="event_image_wrap">
+                </div>
+            </div>
+        </div>
+<div style="height: 48px; width: 100%;"></div>
+        <div class="event_container_outer">
+            <div class="event_container_inner">
+                <div class="event_date_pill_outer">
+                    <div class="event_date_pill_inner">
+                        <div class="pill_date">
+                            <time datetime="2023-10-01">Fri <br>Nov 29</time>
+                        </div>
+                        <div class="pill_time">
+                            <time datetime="10:00">10:00 <br>a.m.</time>
+                        </div>
+                    </div>
+                </div>
+                <div class="event_text_wrap">
+                    <div class="event_title">
+                        <h2>Lorem ipsum dolor sit amet, consectetur!</h2>
+                    </div>
+                    <div class="event_detail_link">
+                        <a href="#"><span>details</span><img src="images/ui icons/new-window_yellow.svg"
+                                alt="new window icon" /></a>
+                    </div>
+                </div>
+                <div class="event_image_wrap">
+                    <img src="images/timmy.jpg" class="placeholder_for_image"></img>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <footer></footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+            gsap.registerPlugin(ScrollTrigger)
+            // gsap code here!
+        });
+    </script>
+</body>
+
+</html>
